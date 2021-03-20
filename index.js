@@ -1,28 +1,24 @@
-const playerAction = process.argv[process.argv.length - 1];
+const game = require('./commonjs/game');
+const length = process.argv.length;
+// const playerAction = process.argv[length - 1];
 
-const random = Math.random() * 3;
+// if (length < 3) {
+//   console.log('你耍赖！ :>> ');
+//   return;
+// }
 
-const getComputerAction = () => {
-  if (random < 1) {
-    return 'rock';
-  }else if (random > 2) {
-    return 'scissor';
-  }else{
-    return 'paper'
+let count = 0;
+process.stdin.on('data', e => {
+  const playerAction = e.toString().trim();
+  const result = game(playerAction);
+
+  if (result === -1) {
+    count++;
   }
-}
 
-const computerAction = getComputerAction()
-console.log('computer :>> ', computerAction);
-
-if (computerAction === playerAction) {
-  console.log('结果 :>> ', '平局');
-}else if (
-  (computerAction === 'rock' && playerAction === 'scissor') 
-  || (computerAction === 'scissor' && playerAction == 'paper')
-  || (computerAction === 'paper' && playerAction == 'rock')
-) {
-  console.log('结果 :>> ', '你输了');
-} else {
-  console.log('结果 :>> ', '你赢了');
-}
+  if (count >= 3) {
+    console.log('-------------- :>> ');
+    console.log('你太强了，我不玩了！');
+    process.exit();
+  }
+});
