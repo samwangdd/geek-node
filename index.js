@@ -1,24 +1,19 @@
-const game = require('./commonjs/game');
-const length = process.argv.length;
-// const playerAction = process.argv[length - 1];
+const glob = require('glob');
 
-// if (length < 3) {
-//   console.log('你耍赖！ :>> ');
-//   return;
-// }
+// 阻塞式
+// let result;
+// console.time();
+// result = glob.sync(__dirname + '/**/*');
+// console.timeEnd();
+// console.log('result :>> ', result);
 
-let count = 0;
-process.stdin.on('data', e => {
-  const playerAction = e.toString().trim();
-  const result = game(playerAction);
-
-  if (result === -1) {
-    count++;
-  }
-
-  if (count >= 3) {
-    console.log('-------------- :>> ');
-    console.log('你太强了，我不玩了！');
-    process.exit();
-  }
+// 非阻塞式
+let result;
+console.time();
+glob(__dirname + '/**/*', (err, res) => {
+  result = res;
+  // console.log('result :>> ', result);
 });
+console.timeEnd();
+console.log('1+1 = :>> ', 1 + 1);
+console.log('__dirname :>> ', __dirname);
