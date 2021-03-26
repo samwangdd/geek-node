@@ -26,5 +26,5 @@ module.exports = function (playerAction) {
   } else {
     point = -1;
   }
-  return point;
+  return { point, computerAction };
 };
