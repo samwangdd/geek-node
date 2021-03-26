@@ -38,7 +38,7 @@ app.get(
     }
 
     next(); // 中间件
-
+    console.log('res.playerWon :>> ', res.playerWon);
     // onion modal 洋葱模型，接收到 playerWon
     if (res.playerWon) {
       playerWinCount++;
@@ -49,15 +49,17 @@ app.get(
       query: { action },
     } = req;
     const { point, computerAction } = game(action);
-    res.status(200);
-    if (point === 0) {
-      res.send(`平局 >> ${action} vs ${computerAction}`);
-    } else if (point === 1) {
-      res.send(`你输了！>> ${action} vs ${computerAction}`);
-    } else {
-      res.send(`你赢了！>> ${action} vs ${computerAction}`);
-      res.playerWon = true; // playerWon 会挂在 res 上，传递给第一个函数
-    }
+    setTimeout(() => {
+      res.status(200);
+      if (point === 0) {
+        res.send(`平局 >> ${action} vs ${computerAction}`);
+      } else if (point === 1) {
+        res.send(`你输了！>> ${action} vs ${computerAction}`);
+      } else {
+        res.send(`你赢了！>> ${action} vs ${computerAction}`);
+        res.playerWon = true; // playerWon 会挂在 res 上，传递给第一个函数
+      }
+    }, 500);
   },
 );
 

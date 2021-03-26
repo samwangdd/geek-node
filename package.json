@@ -18,6 +18,9 @@
   "homepage": "https://github.com/samwangdd/geek-node#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "glob": "^7.1.6"
+    "glob": "^7.1.6",
+    "koa": "^2.13.1",
+    "koa-mount": "^4.0.0",
+    "open": "^8.0.4"
   }
 }
