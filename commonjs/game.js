@@ -29,5 +29,5 @@ module.exports = function (playerAction) {
     console.log('结果 :>> ', '你赢了');
     point = -1;
   }
-  return point;
+  return { point, computerAction };
 };
