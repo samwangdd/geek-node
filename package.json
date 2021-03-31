@@ -21,7 +21,9 @@
     "glob": "^7.1.6",
     "koa": "^2.13.1",
     "koa-mount": "^4.0.0",
+    "koa-static": "^5.0.0",
     "open": "^8.0.4",
     "protocol-buffers": "^4.2.0"
-  }
+  },
+  "devDependencies": {}
 }
