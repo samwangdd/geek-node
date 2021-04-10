@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/samwangdd/geek-node#readme",
   "dependencies": {
+    "easy_sock": "^0.4.1",
     "express": "^4.17.1",
     "glob": "^7.1.6",
     "koa": "^2.13.1",
