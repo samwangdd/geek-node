@@ -13,7 +13,7 @@ const context = vm.createContext({
 
 function createTemplate(fileName) {
   // vm 在 v8 context上下文中执行以下代码
-  template[fileName] = vm.runInContext(
+  templateMap[fileName] = vm.runInContext(
     `(function(data){
         with(data){
           return \`${fs.readFileSync(fileName, 'utf-8')}\`
