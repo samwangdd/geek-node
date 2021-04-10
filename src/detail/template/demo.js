@@ -7,10 +7,12 @@ const templateMap = {
 };
 
 const context = {
+  // 实现模版嵌套
   include: function (name) {
     // TODO: 这里为什么是函数？？
     return templateMap[name]();
   },
+  // 实现 xss 过滤
   _xss: markup => {
     if (!markup) return '';
     return String(markup)
