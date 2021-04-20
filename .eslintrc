@@ -1,0 +1,15 @@
+{
+  "extends": "standard",
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "script"
+  },
+  "env": {
+    "node": true,
+    "mocha": true
+  },
+  "rules": {
+    "no-console": "error",
+    "no-unused-vars": "error"
+  }
+}
