@@ -1,6 +1,6 @@
 const net = require('net');
 
-class RPC {
+module.exports = class RPC {
   constructor({ encodeResponse, decodeRequest, isCompleteRequest }) {
     this.encodeResponse = encodeResponse;
     this.decodeRequest = decodeRequest;
@@ -45,4 +45,4 @@ class RPC {
       },
     };
   }
-}
+};
