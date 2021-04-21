@@ -10,7 +10,6 @@ const detailTemplate = template(__dirname + '/template/index.html');
 app.use(mount('/static', static(`${__dirname}/source/static/`)));
 
 app.use(async ctx => {
-  console.log('ctx :>> ', ctx);
   if (!ctx.query.columnid) {
     ctx.status = 400;
     ctx.body = 'invalid columnid';

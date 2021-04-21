@@ -5,7 +5,8 @@ const static = require('koa-static');
 
 const app = new koa();
 
-app.use(mount('/static', static(__dirname + '/source/')));
+// app.use(mount(static(`${__dirname}/../../`)));
+app.use(static(__dirname + '/source/'));
 
 app.use(
   mount('/', async ctx => {
