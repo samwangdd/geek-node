@@ -4,7 +4,6 @@ const static = require('koa-static');
 const fs = require('fs');
 
 const app = new koa();
-const port = 4000;
 
 app.use(
   mount('/', async ctx => {
@@ -12,4 +11,6 @@ app.use(
   }),
 );
 
-app.listen(port);
+// const port = 4000;
+// app.listen(port);
+module.exports = app;

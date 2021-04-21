@@ -1,1 +1,1 @@
-require('./detail');
+require('./detail/index');

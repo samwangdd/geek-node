@@ -6,12 +6,12 @@ const EasySock = require('easy_sock');
 const protobuf = require('protocol-buffers');
 const fs = require('fs');
 
-const schemas = protobuf(fs.readFileSync(__dirname + '/../../constant/detial.proto'));
+const schemas = protobuf(fs.readFileSync(__dirname + '/../../constant/detail.proto'));
 const { HEADER_LENGTH, SEQ_LENGTH } = require(__dirname + '/../../constant/common');
 
 const easySock = new EasySock({
   ip: '127.0.0.1',
-  port: 4000,
+  port: 4005,
   timeout: 500,
   keepAlive: true,
 });
