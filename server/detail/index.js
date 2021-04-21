@@ -4,12 +4,12 @@ const schemas = protobuf(fs.readFileSync(`${__dirname}/../../constant/detail.pro
 
 const columnData = require('../mockdata/column');
 
-const server = require('../lib/index')(schemas.ColumnRequest, schemas.ColumnRequest);
+const server = require('../lib/index')(schemas.ColumnRequest, schemas.ColumnResponse);
 
 server
   .createServer((request, response) => {
     const columnid = request.body;
-    console.log('columnid :>> ', columnid);
+
     response.end({
       column: columnData[0],
       recommendColumns: [columnData[1], columnData[2]],

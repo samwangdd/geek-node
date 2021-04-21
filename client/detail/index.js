@@ -5,11 +5,12 @@ const koa = require('koa');
 const app = new koa();
 const rpcClient = require('./client');
 const template = require('./template');
-const detailTemplate = template(__dirname + '/source/index.html');
+const detailTemplate = template(__dirname + '/template/index.html');
 
 app.use(mount('/static', static(`${__dirname}/source/static/`)));
 
 app.use(async ctx => {
+  console.log('ctx :>> ', ctx);
   if (!ctx.query.columnid) {
     ctx.status = 400;
     ctx.body = 'invalid columnid';
