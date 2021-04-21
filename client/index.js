@@ -16,7 +16,6 @@ app.use(async (ctx, next) => {
     ctx.redirect(url.format(parsedUrl));
     return;
   }
-
   await next();
 });
 
