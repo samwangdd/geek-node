@@ -27,5 +27,5 @@ app.use(mount('/download', require('./download/index')));
 app.use(mount('/play', require('./play/index')));
 
 app.listen(3005, () => {
-  console.log('client listen 3005 :>> ');
+  console.log('client listen: 3005');
 });

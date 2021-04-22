@@ -9,9 +9,8 @@ const schema = buildSchema(fs.readFileSync(`${__dirname}/comment.gql`, 'utf-8'))
 
 // 一个后端服务（使用一个端口），对应需要一个前端 rpc client
 const commentListClient = require('../rpc-client/comment-list');
-const pariseClient = require('../rpc-client/comment-praise');
+const praiseClient = require('../rpc-client/comment-praise');
 
-console.log('schema.getQueryType() :>> ', schema.getQueryType().getFields());
 // 定义 graphql 协议获取数据的过程
 schema.getQueryType().getFields().comment.resolve = () => {
   return new Promise((resolve, reject) => {
@@ -23,6 +22,21 @@ schema.getQueryType().getFields().comment.resolve = () => {
         console.log('err :>> ', err);
         console.log('res :>> ', res);
         err ? reject(err) : resolve(res.comments);
+      },
+    );
+  });
+};
+
+schema.getMutationType().getFields().praise.resolve = (args0, { id }) => {
+  console.log('id :>> ', id);
+  return new Promise((resolve, reject) => {
+    praiseClient.write(
+      {
+        commentid: id,
+      },
+      function (err, res) {
+        console.log('res :>> ', res);
+        err ? reject(err) : resolve(res.praiseNum);
       },
     );
   });

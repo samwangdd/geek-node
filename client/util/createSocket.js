@@ -1,18 +1,18 @@
 const EasySock = require('easy_sock');
 
-module.exports = function ({ port, ip = '127.0.0.1', schema }) {
+module.exports = function (args) {
+  const { port, schema, ip = '127.0.0.1', timeout = 3500, reqSchemaKey, resSchemaKey } = args;
+
   const easySock = new EasySock({
-    ip: ip ,
+    ip: ip,
     port: port,
-    timeout: 500,
+    timeout: timeout,
     keepAlive: true,
   });
 
-
   // 编码
   easySock.encode = function (data, seq) {
-    const body = schema.CommentListRequest.encode(data);
-
+    const body = schema[reqSchemaKey].encode(data);
     const head = Buffer.alloc(8);
     head.writeInt32BE(seq);
     head.writeInt32BE(body.length, 4);
@@ -23,7 +23,7 @@ module.exports = function ({ port, ip = '127.0.0.1', schema }) {
   // 解码
   easySock.decode = function (buffer) {
     const seq = buffer.readInt32BE();
-    const body = schema.CommentListResponse.decode(buffer.slice(8));
+    const body = schema[resSchemaKey].decode(buffer.slice(8));
 
     return {
       result: body,

@@ -16,5 +16,5 @@ server
     });
   })
   .listen(4005, () => {
-    console.log('rpc server listened : 4005 >> ');
+    console.log('rpc server listened : 4005');
   });
