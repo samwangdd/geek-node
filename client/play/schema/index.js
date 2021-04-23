@@ -19,8 +19,6 @@ schema.getQueryType().getFields().comment.resolve = () => {
         columnid: 0,
       },
       function (err, res) {
-        console.log('err :>> ', err);
-        console.log('res :>> ', res);
         err ? reject(err) : resolve(res.comments);
       },
     );
@@ -28,18 +26,20 @@ schema.getQueryType().getFields().comment.resolve = () => {
 };
 
 schema.getMutationType().getFields().praise.resolve = (args0, { id }) => {
-  console.log('id :>> ', id);
   return new Promise((resolve, reject) => {
     praiseClient.write(
       {
         commentid: id,
       },
       function (err, res) {
-        console.log('res :>> ', res);
         err ? reject(err) : resolve(res.praiseNum);
       },
     );
   });
 };
-
+const root = {
+  comment: () => {
+    return;
+  },
+};
 module.exports = schema;

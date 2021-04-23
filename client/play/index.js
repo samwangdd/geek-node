@@ -7,9 +7,10 @@ const graphqlHTTP = require('koa-graphql');
 const app = new koa();
 
 const schema = require(`${__dirname}/schema/index`);
-app.use(mount('/api', graphqlHTTP({ schema: schema })));
+app.use(mount('/api', graphqlHTTP({ schema: schema, graphiql: true })));
+// localhost:3005/play/api/graphql graphql Web UI
 
-app.use(mount('/static', static(`${__dirname}/source/static`)));
+http: app.use(mount('/static', static(`${__dirname}/source/static`)));
 
 app.use(
   mount('/', async ctx => {
