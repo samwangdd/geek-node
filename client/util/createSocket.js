@@ -1,8 +1,8 @@
 const EasySock = require('easy_sock');
 
 module.exports = function (args) {
-  const { port, schema, ip = '127.0.0.1', timeout = 3500, reqSchemaKey, resSchemaKey } = args;
-
+  const { port, schema, schemaKey, ip = '127.0.0.1', timeout = 3500 } = args;
+  const [encodeSchemaKey, decodeSchemaKey] = schemaKey;
   const easySock = new EasySock({
     ip: ip,
     port: port,
@@ -12,7 +12,7 @@ module.exports = function (args) {
 
   // 编码
   easySock.encode = function (data, seq) {
-    const body = schema[reqSchemaKey].encode(data);
+    const body = schema[encodeSchemaKey].encode(data);
     const head = Buffer.alloc(8);
     head.writeInt32BE(seq);
     head.writeInt32BE(body.length, 4);
@@ -23,7 +23,7 @@ module.exports = function (args) {
   // 解码
   easySock.decode = function (buffer) {
     const seq = buffer.readInt32BE();
-    const body = schema[resSchemaKey].decode(buffer.slice(8));
+    const body = schema[decodeSchemaKey].decode(buffer.slice(8));
 
     return {
       result: body,
