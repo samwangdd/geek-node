@@ -3,12 +3,13 @@
  */
 const fs = require('fs');
 const protobuf = require('protocol-buffers');
-const createSocket = require('../../util/createSocket');
-const schema = protobuf(fs.readFileSync(`${__dirname}/../schema/comment.proto`));
 
+const appRoot = process.cwd();
+const schema = protobuf(fs.readFileSync(`${appRoot}/constant/comment.proto`));
+
+const createSocket = require('../../util/createSocket');
 module.exports = createSocket({
   port: 4006,
   schema: schema,
-  reqSchemaKey: 'CommentListRequest',
-  resSchemaKey: 'CommentListResponse',
+  schemaKey: ['CommentListRequest', 'CommentListResponse'],
 });

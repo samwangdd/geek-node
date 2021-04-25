@@ -2,9 +2,10 @@
 const fs = require('fs');
 const protobuf = require('protocol-buffers');
 
-const schema = protobuf(fs.readFileSync(`${__dirname}/../../client/play/schema/comment.proto`));
-const commentData = require('../mockdata/comment');
+const appRoot = process.cwd();
+const schema = protobuf(fs.readFileSync(`${appRoot}/constant/comment.proto`));
 
+const commentData = require('../mockdata/comment');
 const server = require('../lib/index')(schema.PraiseRequest, schema.PraiseResponse);
 server
   .createServer((request, response) => {
