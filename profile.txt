@@ -1,0 +1,779 @@
+Statistical profiling result from isolate-0x118008000-25922-v8.log, (112316 ticks, 116 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+    144    0.1%          /usr/lib/system/libsystem_malloc.dylib
+     55    0.0%          /usr/lib/system/libsystem_kernel.dylib
+     25    0.0%          /usr/lib/system/libsystem_pthread.dylib
+     16    0.0%          /usr/lib/system/libsystem_c.dylib
+     15    0.0%          /usr/lib/system/libsystem_platform.dylib
+      8    0.0%          /usr/lib/libc++.1.dylib
+      3    0.0%          /usr/lib/libc++abi.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+    307    0.3%    0.3%  LazyCompile: *send /Users/sam/CodeLab/node-geek/node_modules/koa-send/index.js:50:21
+    218    0.2%    0.2%  LazyCompile: *ondata internal/streams/readable.js:717:18
+    185    0.2%    0.2%  LazyCompile: *connectionListenerInternal _http_server.js:418:36
+    173    0.2%    0.2%  LazyCompile: *Socket net.js:268:16
+    173    0.2%    0.2%  LazyCompile: *ReadStream._read internal/fs/streams.js:159:38
+    166    0.1%    0.1%  LazyCompile: *logger /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:57:32
+    149    0.1%    0.1%  LazyCompile: *handleRequest /Users/sam/CodeLab/node-geek/node_modules/koa/lib/application.js:162:16
+    127    0.1%    0.1%  LazyCompile: *destroy internal/streams/destroy.js:5:17
+    127    0.1%    0.1%  LazyCompile: *<anonymous> /Users/sam/CodeLab/node-geek/node_modules/koa-mount/index.js:48:25
+    123    0.1%    0.1%  LazyCompile: *parserOnHeadersComplete _http_common.js:75:33
+    120    0.1%    0.1%  LazyCompile: *getStatsFromBinding internal/fs/utils.js:487:29
+    117    0.1%    0.1%  LazyCompile: *log /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:108:14
+    110    0.1%    0.1%  LazyCompile: *wrapper fs.js:537:19
+    109    0.1%    0.1%  LazyCompile: *resOnFinish _http_server.js:756:21
+    100    0.1%    0.1%  LazyCompile: *set body /Users/sam/CodeLab/node-geek/node_modules/koa/lib/response.js:134:11
+    100    0.1%    0.1%  LazyCompile: *end _http_outgoing.js:769:45
+     97    0.1%    0.1%  LazyCompile: *Readable.read internal/streams/readable.js:390:35
+     96    0.1%    0.1%  LazyCompile: *parserOnIncoming _http_server.js:809:26
+     94    0.1%    0.1%  LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+     92    0.1%    0.1%  LazyCompile: *ReadableState internal/streams/readable.js:90:23
+     90    0.1%    0.1%  LazyCompile: *encodings /Users/sam/CodeLab/node-geek/node_modules/negotiator/index.js:55:52
+     89    0.1%    0.1%  LazyCompile: *afterWriteTick internal/streams/writable.js:451:24
+     88    0.1%    0.1%  LazyCompile: *ReadStream internal/fs/streams.js:52:20
+     87    0.1%    0.1%  LazyCompile: *Writable.uncork internal/streams/writable.js:310:37
+     86    0.1%    0.1%  LazyCompile: *resolve path.js:973:10
+     86    0.1%    0.1%  LazyCompile: *formatWithOptionsInternal internal/util/inspect.js:1893:35
+     86    0.1%    0.1%  LazyCompile: *Readable.pipe internal/streams/readable.js:645:35
+     81    0.1%    0.1%  LazyCompile: *Readable.removeListener internal/streams/readable.js:887:45
+     79    0.1%    0.1%  LazyCompile: *Readable internal/streams/readable.js:187:18
+     72    0.1%    0.1%  LazyCompile: *get path /Users/sam/CodeLab/node-geek/node_modules/koa/lib/request.js:144:11
+     70    0.1%    0.1%  LazyCompile: *serve /Users/sam/CodeLab/node-geek/node_modules/koa-static/index.js:39:33
+     70    0.1%    0.1%  LazyCompile: *readableAddChunk internal/streams/readable.js:231:26
+     69    0.1%    0.1%  LazyCompile: *normalize path.js:1004:12
+     68    0.1%    0.1%  LazyCompile: *createContext /Users/sam/CodeLab/node-geek/node_modules/koa/lib/application.js:177:16
+     67    0.1%    0.1%  LazyCompile: *set path /Users/sam/CodeLab/node-geek/node_modules/koa/lib/request.js:155:11
+     62    0.1%    0.1%  LazyCompile: *log internal/console/constructor.js:357:6
+     61    0.1%    0.1%  LazyCompile: *writeHead _http_server.js:250:19
+     60    0.1%    0.1%  LazyCompile: *cleanup internal/streams/readable.js:690:19
+     59    0.1%    0.1%  LazyCompile: *onwrite internal/streams/writable.js:394:17
+     59    0.1%    0.1%  LazyCompile: *join path.js:1033:7
+     58    0.1%    0.1%  LazyCompile: *assignSocket _http_server.js:220:62
+     57    0.1%    0.1%  LazyCompile: *set /Users/sam/CodeLab/node-geek/node_modules/koa/lib/response.js:459:6
+     57    0.1%    0.1%  LazyCompile: *finishMaybe internal/streams/writable.js:635:21
+     55    0.0%    0.0%  LazyCompile: *parse url.js:159:37
+     54    0.0%    0.0%  LazyCompile: *writeOrBuffer internal/streams/writable.js:334:23
+     54    0.0%    0.0%  LazyCompile: *value internal/console/constructor.js:258:20
+     54    0.0%    0.0%  LazyCompile: *socketListenerWrap _http_server.js:923:37
+     53    0.0%    0.0%  LazyCompile: *Socket._writeGeneric net.js:759:42
+     50    0.0%    0.0%  LazyCompile: *endReadableNT internal/streams/readable.js:1320:23
+     49    0.0%    0.0%  LazyCompile: *first /Users/sam/CodeLab/node-geek/node_modules/ee-first/index.js:24:15
+     46    0.0%    0.0%  LazyCompile: *doWrite internal/streams/writable.js:367:17
+     45    0.0%    0.0%  LazyCompile: *applyStyle /Users/sam/CodeLab/node-geek/node_modules/koa-logger/node_modules/chalk/index.js:159:20
+     44    0.0%    0.0%  LazyCompile: *resume_ internal/streams/readable.js:965:17
+     44    0.0%    0.0%  LazyCompile: *<anonymous> /Users/sam/CodeLab/node-geek/client/index.js:11:9
+     43    0.0%    0.0%  LazyCompile: *onconnection net.js:1531:22
+     41    0.0%    0.0%  LazyCompile: *set type /Users/sam/CodeLab/node-geek/node_modules/koa/lib/response.js:308:11
+     39    0.0%    0.0%  RegExp: ^([a-zA-Z]:|[\\\/]{2}[^\\\/]+[\\\/]+[^\\\/]+)?([\\\/])?([\s\S]*?)$
+     39    0.0%    0.0%  LazyCompile: *maybeReadMore_ internal/streams/readable.js:600:24
+     38    0.0%    0.0%  LazyCompile: *connectionCorkNT _http_outgoing.js:732:26
+     37    0.0%    0.0%  LazyCompile: *OutgoingMessage _http_outgoing.js:85:25
+     37    0.0%    0.0%  LazyCompile: *Accepts.encoding.Accepts.encodings /Users/sam/CodeLab/node-geek/node_modules/accepts/index.js:127:40
+     36    0.0%    0.0%  LazyCompile: *EventEmitter events.js:65:22
+     34    0.0%    0.0%  LazyCompile: *onfinish internal/streams/readable.js:774:20
+     33    0.0%    0.0%  LazyCompile: *pipeOnDrainFunctionResult internal/streams/readable.js:799:44
+     32    0.0%    0.0%  LazyCompile: *stat fs.js:1051:14
+     32    0.0%    0.0%  LazyCompile: *done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+     31    0.0%    0.0%  LazyCompile: *socketOnClose _http_server.js:547:23
+     30    0.0%    0.0%  LazyCompile: *emitReadable_ internal/streams/readable.js:565:23
+     29    0.0%    0.0%  LazyCompile: *respond /Users/sam/CodeLab/node-geek/node_modules/koa/lib/application.js:229:17
+     29    0.0%    0.0%  LazyCompile: *removeListener events.js:451:28
+     29    0.0%    0.0%  LazyCompile: *parserOnMessageComplete _http_common.js:145:33
+     28    0.0%    0.0%  LazyCompile: *updateOutgoingData _http_server.js:513:28
+     28    0.0%    0.0%  LazyCompile: *<anonymous> internal/console/constructor.js:337:10
+     25    0.0%    0.0%  LazyCompile: *emitCloseNT internal/streams/destroy.js:78:21
+     23    0.0%    0.0%  RegExp: (?:^|\W)chunked(?:$|\W)
+     23    0.0%    0.0%  LazyCompile: *onFinish /Users/sam/CodeLab/node-geek/node_modules/on-finished/index.js:95:20
+     23    0.0%    0.0%  LazyCompile: *get writable /Users/sam/CodeLab/node-geek/node_modules/koa/lib/response.js:523:15
+     22    0.0%    0.0%  LazyCompile: *callFinal internal/streams/writable.js:609:19
+     22    0.0%    0.0%  LazyCompile: *Readable.on internal/streams/readable.js:857:33
+     21    0.0%    0.0%  LazyCompile: *nextTick internal/process/task_queues.js:101:18
+     20    0.0%    0.0%  LazyCompile: *value internal/console/constructor.js:321:20
+     20    0.0%    0.0%  LazyCompile: *_addListener events.js:343:22
+     19    0.0%    0.0%  LazyCompile: *socketOnDrain _http_server.js:518:23
+     18    0.0%    0.0%  LazyCompile: *onceWrapper events.js:416:21
+     18    0.0%    0.0%  LazyCompile: *emit events.js:264:44
+     18    0.0%    0.0%  LazyCompile: *_storeHeader _http_outgoing.js:360:22
+     17    0.0%    0.0%  LazyCompile: *onFinish _http_outgoing.js:764:18
+     17    0.0%    0.0%  LazyCompile: *Writable.write internal/streams/writable.js:258:36
+     16    0.0%    0.0%  LazyCompile: *onevent /Users/sam/CodeLab/node-geek/node_modules/ee-first/index.js:81:26
+     16    0.0%    0.0%  LazyCompile: *matchKnownFields _http_incoming.js:157:26
+     16    0.0%    0.0%  LazyCompile: *WritableState internal/streams/writable.js:67:23
+     16    0.0%    0.0%  LazyCompile: *Socket.resume net.js:611:35
+     16    0.0%    0.0%  LazyCompile: *Readable.resume internal/streams/readable.js:944:37
+     15    0.0%    0.0%  LazyCompile: *destroyReadStream /Users/sam/CodeLab/node-geek/node_modules/destroy/index.js:54:27
+     15    0.0%    0.0%  LazyCompile: *arrayClone events.js:602:20
+     14    0.0%    0.0%  LazyCompile: *noop internal/util/debuglog.js:45:14
+     14    0.0%    0.0%  LazyCompile: *get internal/streams/duplex.js:92:8
+     14    0.0%    0.0%  LazyCompile: *<anonymous> internal/fs/streams.js:193:49
+     13    0.0%    0.0%  LazyCompile: *onParserExecuteCommon _http_server.js:658:31
+     13    0.0%    0.0%  LazyCompile: *format url.js:576:39
+     13    0.0%    0.0%  LazyCompile: *cleanParser _http_common.js:234:21
+     13    0.0%    0.0%  LazyCompile: *afterShutdown net.js:428:23
+     12    0.0%    0.0%  LazyCompile: *onParserExecute _http_server.js:601:25
+     12    0.0%    0.0%  LazyCompile: *Readable.pause internal/streams/readable.js:978:36
+     12    0.0%    0.0%  LazyCompile: *<anonymous> internal/util.js:296:24
+     11    0.0%    0.0%  RegExp: (?:\.0*|(\.[^0]+)0+)$
+     11    0.0%    0.0%  LazyCompile: *get status /Users/sam/CodeLab/node-geek/node_modules/koa/lib/response.js:72:13
+     11    0.0%    0.0%  LazyCompile: *get /Users/sam/CodeLab/node-geek/node_modules/koa-logger/node_modules/chalk/index.js:141:6
+     11    0.0%    0.0%  LazyCompile: *dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+     11    0.0%    0.0%  LazyCompile: *cleanup /Users/sam/CodeLab/node-geek/node_modules/ee-first/index.js:58:19
+     11    0.0%    0.0%  LazyCompile: *Stream internal/streams/legacy.js:9:16
+     10    0.0%    0.0%  LazyCompile: *Accepts /Users/sam/CodeLab/node-geek/node_modules/accepts/index.js:32:18
+      9    0.0%    0.0%  RegExp: ^\s*([^\s;]+)\s*(?:;(.*))?$
+      9    0.0%    0.0%  RegExp: \r?\n
+      9    0.0%    0.0%  LazyCompile: *get internal/console/constructor.js:203:14
+      8    0.0%    0.0%  LazyCompile: *get /Users/sam/CodeLab/node-geek/node_modules/koa-send/node_modules/debug/src/common.js:123:9
+      8    0.0%    0.0%  LazyCompile: *closeFsStream internal/fs/streams.js:251:23
+      8    0.0%    0.0%  LazyCompile: *clearIncoming _http_server.js:714:23
+      8    0.0%    0.0%  LazyCompile: *allocNewPool internal/fs/streams.js:40:22
+      8    0.0%    0.0%  LazyCompile: *<anonymous> internal/fs/utils.js:630:42
+      7    0.0%    0.0%  LazyCompile: *parseurl /Users/sam/CodeLab/node-geek/node_modules/parseurl/index.js:35:19
+      7    0.0%    0.0%  LazyCompile: *get /Users/sam/CodeLab/node-geek/node_modules/koa-logger/node_modules/chalk/index.js:131:6
+      7    0.0%    0.0%  LazyCompile: *debug /Users/sam/CodeLab/node-geek/node_modules/koa-mount/node_modules/debug/src/common.js:64:17
+      7    0.0%    0.0%  LazyCompile: *<anonymous> internal/fs/streams.js:252:32
+      6    0.0%    0.0%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      6    0.0%    0.0%  LazyCompile: *writevGeneric internal/stream_base_commons.js:118:23
+      6    0.0%    0.0%  LazyCompile: *once events.js:434:44
+      6    0.0%    0.0%  LazyCompile: *get internal/streams/writable.js:710:8
+      6    0.0%    0.0%  LazyCompile: *get internal/streams/readable.js:1165:8
+      6    0.0%    0.0%  LazyCompile: *flow internal/streams/readable.js:989:14
+      6    0.0%    0.0%  LazyCompile: *extname path.js:1228:10
+      6    0.0%    0.0%  LazyCompile: *<anonymous> internal/streams/writable.js:610:17
+      5    0.0%    0.0%  LazyCompile: *get net.js:1684:6
+      5    0.0%    0.0%  LazyCompile: *addListener events.js:405:58
+      5    0.0%    0.0%  LazyCompile: *_flushOutput _http_outgoing.js:889:63
+      4    0.0%    0.0%  RegExp: (\d)(?=(\d\d\d)+(?!\d))
+      4    0.0%    0.0%  LazyCompile: *setHeader _http_outgoing.js:556:57
+      4    0.0%    0.0%  LazyCompile: *set status /Users/sam/CodeLab/node-geek/node_modules/koa/lib/response.js:83:13
+      4    0.0%    0.0%  LazyCompile: *get header /Users/sam/CodeLab/node-geek/node_modules/koa/lib/response.js:47:13
+      4    0.0%    0.0%  LazyCompile: *get /Users/sam/CodeLab/node-geek/node_modules/koa-mount/node_modules/debug/src/common.js:123:9
+      4    0.0%    0.0%  LazyCompile: *emitCloseNT _http_server.js:802:21
+      4    0.0%    0.0%  LazyCompile: *clearBuffer internal/streams/writable.js:493:21
+      4    0.0%    0.0%  LazyCompile: *callback /Users/sam/CodeLab/node-geek/node_modules/ee-first/index.js:53:20
+      3    0.0%    0.0%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      3    0.0%    0.0%  RegExp: ^((?:@[^/\\%]+\/)?[^./\\%][^/\\%]*)(\/.*)?$
+      3    0.0%    0.0%  LazyCompile: *writeGeneric internal/stream_base_commons.js:143:22
+      3    0.0%    0.0%  LazyCompile: *unpipe internal/streams/readable.js:781:18
+      3    0.0%    0.0%  LazyCompile: *push internal/fixed_queue.js:75:7
+      3    0.0%    0.0%  LazyCompile: *open fs.js:442:14
+      3    0.0%    0.0%  LazyCompile: *maybeReadMore internal/streams/readable.js:593:23
+      3    0.0%    0.0%  LazyCompile: *listenerCount events.js:582:23
+      3    0.0%    0.0%  LazyCompile: *getOrSetAsyncId internal/async_hooks.js:395:25
+      3    0.0%    0.0%  LazyCompile: *getHeaders _http_outgoing.js:590:59
+      3    0.0%    0.0%  LazyCompile: *getColorDepth internal/tty.js:102:23
+      3    0.0%    0.0%  LazyCompile: *enabled /Users/sam/CodeLab/node-geek/node_modules/koa-mount/node_modules/debug/src/common.js:198:18
+      3    0.0%    0.0%  LazyCompile: *emitReadable internal/streams/readable.js:554:22
+      3    0.0%    0.0%  LazyCompile: *_unrefTimer net.js:393:52
+      3    0.0%    0.0%  LazyCompile: *Module._nodeModulePaths internal/modules/cjs/loader.js:575:37
+      3    0.0%    0.0%  LazyCompile: *<anonymous> internal/fs/streams.js:121:26
+      3    0.0%    0.0%  LazyCompile: *<anonymous> fs.js:171:10
+      2    0.0%    0.0%  LazyCompile: *storeHeader _http_outgoing.js:500:21
+      2    0.0%    0.0%  LazyCompile: *normalizeString path.js:52:25
+      2    0.0%    0.0%  LazyCompile: *isHidden /Users/sam/CodeLab/node-geek/node_modules/koa-send/index.js:162:19
+      2    0.0%    0.0%  LazyCompile: *handleResponse /Users/sam/CodeLab/node-geek/node_modules/koa/lib/application.js:166:28
+      2    0.0%    0.0%  LazyCompile: *get method /Users/sam/CodeLab/node-geek/node_modules/koa/lib/request.js:122:13
+      2    0.0%    0.0%  LazyCompile: *get /Users/sam/CodeLab/node-geek/node_modules/koa/lib/response.js:416:6
+      2    0.0%    0.0%  LazyCompile: *get /Users/sam/CodeLab/node-geek/node_modules/koa-logger/node_modules/chalk/index.js:59:6
+      2    0.0%    0.0%  LazyCompile: *createWriteWrap internal/stream_base_commons.js:106:25
+      2    0.0%    0.0%  LazyCompile: *EventEmitter.init events.js:131:29
+      2    0.0%    0.0%  LazyCompile: *<anonymous> internal/streams/destroy.js:39:30
+      2    0.0%    0.0%  LazyCompile: *<anonymous> internal/per_context/primordials.js:23:10
+      1    0.0%    0.0%  RegExp: ^\s*(?:function)?\*
+      1    0.0%    0.0%  RegExp: ^(\/\/?(?!\/)[^?\s]*)(\?[^\s]*)?$
+      1    0.0%    0.0%  RegExp: (?:^|\/)\.?\.$
+      1    0.0%    0.0%  RegExp: (?:^|[\\/])\.\.(?:[\\/]|$)
+      1    0.0%    0.0%  LazyCompile: *proto.<computed> /Users/sam/CodeLab/node-geek/node_modules/delegates/index.js:39:25
+      1    0.0%    0.0%  LazyCompile: *processPromiseRejections internal/process/promises.js:190:34
+      1    0.0%    0.0%  LazyCompile: *parseAcceptEncoding /Users/sam/CodeLab/node-geek/node_modules/negotiator/lib/encoding.js:31:29
+      1    0.0%    0.0%  LazyCompile: *parse path.js:1282:8
+      1    0.0%    0.0%  LazyCompile: *onunpipe internal/streams/readable.js:672:20
+      1    0.0%    0.0%  LazyCompile: *onerror /Users/sam/CodeLab/node-geek/node_modules/koa/lib/application.js:165:21
+      1    0.0%    0.0%  LazyCompile: *hidden internal/errors.js:286:25
+      1    0.0%    0.0%  LazyCompile: *hasHeader _http_outgoing.js:607:57
+      1    0.0%    0.0%  LazyCompile: *get internal/streams/writable.js:752:8
+      1    0.0%    0.0%  LazyCompile: *formatNumber internal/util/inspect.js:1384:22
+      1    0.0%    0.0%  LazyCompile: *destroy /Users/sam/CodeLab/node-geek/node_modules/destroy/index.js:31:17
+      1    0.0%    0.0%  LazyCompile: *_onceWrap events.js:426:19
+      1    0.0%    0.0%  LazyCompile: *Socket._final net.js:403:35
+      1    0.0%    0.0%  LazyCompile: *<anonymous> net.js:671:24
+      1    0.0%    0.0%  LazyCompile: *<anonymous> internal/validators.js:88:3
+
+ [C++]:
+   ticks  total  nonlib   name
+  100526   89.5%   89.7%  T _host_info
+   2875    2.6%    2.6%  T __ZN2v88internal8Compiler30GetSharedFunctionInfoForScriptEPNS0_7IsolateENS0_6HandleINS0_6StringEEERKNS1_13ScriptDetailsENS_19ScriptOriginOptionsEPNS_9ExtensionEPNS0_10ScriptDataENS_14ScriptCompiler14CompileOptionsENSF_13NoCacheReasonENS0_11NativesFlagE
+    483    0.4%    0.4%  T ___psynch_mutexwait
+    348    0.3%    0.3%  T _semaphore_create
+    128    0.1%    0.1%  T _chmod
+     72    0.1%    0.1%  T __ZN4node2fs16NewFSReqCallbackERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     68    0.1%    0.1%  t __ZN4nodeL9EnvGetterEN2v85LocalINS0_4NameEEERKNS0_20PropertyCallbackInfoINS0_5ValueEEE
+     51    0.0%    0.0%  T _listxattr
+     49    0.0%    0.0%  T ___workq_kernreturn
+     37    0.0%    0.0%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_6WritevERKN2v820FunctionCallbackInfoINS2_5ValueEEEEEEEvS7_
+     34    0.0%    0.0%  T __ZN4node10contextify17ContextifyContext15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     32    0.0%    0.0%  T ___commpage_gettimeofday
+     32    0.0%    0.0%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_11WriteBufferERKN2v820FunctionCallbackInfoINS2_5ValueEEEEEEEvS7_
+     27    0.0%    0.0%  t __ZN2v88internal17PrototypeIterator7AdvanceEv
+     25    0.0%    0.0%  T __ZN4node13native_module15NativeModuleEnv15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     24    0.0%    0.0%  t __ZN4node2fsL4ReadERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     23    0.0%    0.0%  T _mach_vm_map
+     22    0.0%    0.0%  T ___fork
+     19    0.0%    0.0%  t __ZN4node9inspector12_GLOBAL__N_120InspectorConsoleCallERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     17    0.0%    0.0%  t __ZN4node2fsL4StatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     17    0.0%    0.0%  t __ZN4node2fsL22InternalModuleReadJSONERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     13    0.0%    0.0%  t __ZN4node2fsL18InternalModuleStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     13    0.0%    0.0%  T __ZN2v88Function4CallENS_5LocalINS_7ContextEEENS1_INS_5ValueEEEiPS5_
+     12    0.0%    0.0%  T _getattrlist
+     12    0.0%    0.0%  T __kernelrpc_mach_port_get_refs
+     11    0.0%    0.0%  T _platform_task_update_threads
+     10    0.0%    0.0%  t __ZNSt3__112__hash_tableIN4node19CleanupHookCallbackENS2_4HashENS2_5EqualENS_9allocatorIS2_EEE14__erase_uniqueIS2_EEmRKT_
+      9    0.0%    0.0%  t __ZN4node2fsL4OpenERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      9    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser4FreeERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      9    0.0%    0.0%  T __ZN4node21InternalCallbackScope5CloseEv
+      9    0.0%    0.0%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_8ShutdownERKN2v820FunctionCallbackInfoINS2_5ValueEEEEEEEvS7_
+      8    0.0%    0.0%  T __ZN2v88internal9Accessors17ArrayLengthSetterENS_5LocalINS_4NameEEENS2_INS_5ValueEEERKNS_20PropertyCallbackInfoINS_7BooleanEEE
+      7    0.0%    0.0%  t __platform_task_deallocate
+      7    0.0%    0.0%  t __ZZN4node15LibuvStreamWrap10InitializeEN2v85LocalINS1_6ObjectEEENS2_INS1_5ValueEEENS2_INS1_7ContextEEEPvEN3$_08__invokeERKNS1_20FunctionCallbackInfoIS5_EE
+      7    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_119HandleApiCallHelperILb1EEENS0_11MaybeHandleINS0_6ObjectEEEPNS0_7IsolateENS0_6HandleINS0_10HeapObjectEEESA_NS8_INS0_20FunctionTemplateInfoEEENS8_IS4_EENS0_16BuiltinArgumentsE
+      7    0.0%    0.0%  T _sigprocmask
+      7    0.0%    0.0%  T __ZThn88_N4node15LibuvStreamWrap7IsAliveEv
+      7    0.0%    0.0%  T __ZN4node2fs5CloseERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      7    0.0%    0.0%  T __ZN4node20InternalMakeCallbackEPNS_11EnvironmentEN2v85LocalINS2_6ObjectEEES5_NS3_INS2_8FunctionEEEiPNS3_INS2_5ValueEEENS_13async_contextE
+      6    0.0%    0.0%  t __ZN2v88internal25FunctionCallbackArguments4CallENS0_15CallHandlerInfoE
+      6    0.0%    0.0%  t __ZN2v88internal12StringHasher20HashSequentialStringIhEEjPKT_iy
+      6    0.0%    0.0%  t __ZN2v812_GLOBAL__N_114CallDepthScopeILb1EEC1EPNS_8internal7IsolateENS_5LocalINS_7ContextEEE
+      6    0.0%    0.0%  T __ZN4node9AsyncWrap12MakeCallbackEN2v85LocalINS1_8FunctionEEEiPNS2_INS1_5ValueEEE
+      6    0.0%    0.0%  T __ZN4node21InternalCallbackScopeC2EPNS_11EnvironmentEN2v85LocalINS3_6ObjectEEERKNS_13async_contextEi
+      5    0.0%    0.0%  t __pthread_mutex_global_init
+      5    0.0%    0.0%  T _pthread_rwlock_init
+      5    0.0%    0.0%  T __ZNK2v85Value8ToStringENS_5LocalINS_7ContextEEE
+      5    0.0%    0.0%  T __ZN4node9AsyncWrap21EmitTraceEventDestroyEv
+      5    0.0%    0.0%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_11WriteStringILNS_8encodingE1EEEiRKN2v820FunctionCallbackInfoINS4_5ValueEEEEEEEvS9_
+      5    0.0%    0.0%  T __ZN4node10HandleWrap5CloseERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      5    0.0%    0.0%  T __ZN2v811HandleScopeD1Ev
+      4    0.0%    0.0%  t __ZN4nodeL8EnvQueryEN2v85LocalINS0_4NameEEERKNS0_20PropertyCallbackInfoINS0_7IntegerEEE
+      4    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser15on_header_fieldEPKcm
+      4    0.0%    0.0%  t __ZN2v88internal6String7FlattenEPNS0_7IsolateENS0_6HandleIS1_EENS0_14AllocationTypeE
+      4    0.0%    0.0%  t __ZN2v88internal19SequentialStringKeyIhE7IsMatchENS0_6StringE
+      4    0.0%    0.0%  t __ZN2v88internal14LookupIteratorC2EPNS0_7IsolateENS0_6HandleINS0_6ObjectEEENS4_INS0_4NameEEEmNS4_INS0_10JSReceiverEEENS1_13ConfigurationE
+      4    0.0%    0.0%  T __ZN4node9AsyncWrap19EmitTraceEventAfterENS0_12ProviderTypeEd
+      4    0.0%    0.0%  T __ZN4node2fs12AfterIntegerEP7uv_fs_s
+      4    0.0%    0.0%  T __ZN4node2fs11AfterNoArgsEP7uv_fs_s
+      4    0.0%    0.0%  T __ZN2v88internal10ApiNatives17InstantiateObjectEPNS0_7IsolateENS0_6HandleINS0_18ObjectTemplateInfoEEENS4_INS0_10JSReceiverEEE
+      4    0.0%    0.0%  T __ZN2v87Isolate9InContextEv
+      4    0.0%    0.0%  T __ZN2v86Object3GetENS_5LocalINS_7ContextEEEj
+      3    0.0%    0.0%  t __platform_thread_deallocate
+      3    0.0%    0.0%  t __ZThn8_N2v88internal23PointersUpdatingVisitorD1Ev
+      3    0.0%    0.0%  t __ZN4node2fs13FSReqCallbackD0Ev
+      3    0.0%    0.0%  t __ZN2v88internalL28Builtin_Impl_DateConstructorENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      3    0.0%    0.0%  t __ZN2v88internalL26Builtin_Impl_HandleApiCallENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      3    0.0%    0.0%  t __ZN2v88internal14LookupIterator3KeyC2EPNS0_7IsolateENS0_6HandleINS0_6ObjectEEE
+      3    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_119HandleApiCallHelperILb0EEENS0_11MaybeHandleINS0_6ObjectEEEPNS0_7IsolateENS0_6HandleINS0_10HeapObjectEEESA_NS8_INS0_20FunctionTemplateInfoEEENS8_IS4_EENS0_16BuiltinArgumentsE
+      3    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_117InstantiateObjectEPNS0_7IsolateENS0_6HandleINS0_18ObjectTemplateInfoEEENS4_INS0_10JSReceiverEEEb
+      3    0.0%    0.0%  t __ZN2v812_GLOBAL__N_114CallDepthScopeILb0EEC1EPNS_8internal7IsolateENS_5LocalINS_7ContextEEE
+      3    0.0%    0.0%  T __ZN4node9AsyncWrap20EmitTraceEventBeforeEv
+      3    0.0%    0.0%  T __ZN4node2fs13FSReqCallback7ResolveEN2v85LocalINS2_5ValueEEE
+      3    0.0%    0.0%  T __ZN4node24NodeArrayBufferAllocator8AllocateEm
+      3    0.0%    0.0%  T __ZN4node24MakeLibuvRequestCallbackI7uv_fs_sPFvPS1_EE7WrapperES2_
+      3    0.0%    0.0%  T __ZN4node10contextify16ContextifyScript3NewERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      3    0.0%    0.0%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_11WriteStringILNS_8encodingE4EEEiRKN2v820FunctionCallbackInfoINS4_5ValueEEEEEEEvS9_
+      3    0.0%    0.0%  T __ZN4node10StreamBase11WriteBufferERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      3    0.0%    0.0%  T __ZN2v87Context5EnterEv
+      3    0.0%    0.0%  T __ZN2v87Context4ExitEv
+      3    0.0%    0.0%  T __ZN2v811ArrayBuffer15GetBackingStoreEv
+      2    0.0%    0.0%  t __ZN4node2fsL5LStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser7ExecuteEPKcm
+      2    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser5ProxyIMS1_FivEXadL_ZNS1_16on_message_beginEvEEE3RawEP18llhttp__internal_s
+      2    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser19on_message_completeEv
+      2    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser10InitializeERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      2    0.0%    0.0%  t __ZN4node10task_queueL13RunMicrotasksERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.0%    0.0%  t __ZN2v88internalL37Builtin_Impl_DatePrototypeToUTCStringENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      2    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_124ProbeInstantiationsCacheEPNS0_7IsolateENS0_6HandleINS0_13NativeContextEEEiNS1_11CachingModeE
+      2    0.0%    0.0%  t __ZN2v88internal11StringShape33DispatchToSpecificTypeWithoutCastIZNS1_22DispatchToSpecificTypeIZNS0_6String3GetEiE19StringGetDispatchertJRiEEET0_S4_DpOT1_E17CastingDispatchertJRS4_S6_EEES7_SA_
+      2    0.0%    0.0%  T _platform_thread_info
+      2    0.0%    0.0%  T _host_get_special_port
+      2    0.0%    0.0%  T __ZNK2v812BackingStore4DataEv
+      2    0.0%    0.0%  T __ZN4node9AsyncWrap10AsyncResetEN2v85LocalINS1_6ObjectEEEdb
+      2    0.0%    0.0%  T __ZN4node7binding18GetInternalBindingERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.0%    0.0%  T __ZN4node7TTYWrap3NewERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.0%    0.0%  T __ZN4node6Buffer4DataEN2v85LocalINS1_5ValueEEE
+      2    0.0%    0.0%  T __ZN4node2fs15FSReqAfterScope5ClearEv
+      2    0.0%    0.0%  T __ZN4node14StreamListener21OnStreamAfterShutdownEPNS_12ShutdownWrapEi
+      2    0.0%    0.0%  T __ZN4node11Environment14CheckImmediateEP10uv_check_s
+      2    0.0%    0.0%  T __ZN4node10StreamBase11WriteStringILNS_8encodingE1EEEiRKN2v820FunctionCallbackInfoINS3_5ValueEEE
+      2    0.0%    0.0%  T __ZN2v88internal8Builtins4nameEi
+      2    0.0%    0.0%  T __ZN2v88internal28Builtin_ObjectDefinePropertyEiPmPNS0_7IsolateE
+      2    0.0%    0.0%  T __ZN2v87Isolate31SuppressMicrotaskExecutionScopeD1Ev
+      2    0.0%    0.0%  T __ZN2v86Object3GetENS_5LocalINS_7ContextEEENS1_INS_5ValueEEE
+      1    0.0%    0.0%  t __pthread_wqthread_exit
+      1    0.0%    0.0%  t __pthread_tsd_cleanup
+      1    0.0%    0.0%  t __ZZN4node15LibuvStreamWrap9ReadStartEvEN3$_28__invokeEP11uv_stream_slPK8uv_buf_t
+      1    0.0%    0.0%  t __ZZN4node15LibuvStreamWrap9ReadStartEvEN3$_18__invokeEP11uv_handle_smP8uv_buf_t
+      1    0.0%    0.0%  t __ZThn8_NK4node22PerIsolatePlatformData30NonNestableDelayedTasksEnabledEv
+      1    0.0%    0.0%  t __ZNSt3__16vectorIN2v86GlobalINS1_6ObjectEEENS_9allocatorIS4_EEE8__appendEm
+      1    0.0%    0.0%  t __ZNSt3__124__put_character_sequenceIcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_PKS4_m
+      1    0.0%    0.0%  t __ZNSt3__116__pad_and_outputIcNS_11char_traitsIcEEEENS_19ostreambuf_iteratorIT_T0_EES6_PKS4_S8_S8_RNS_8ios_baseES4_
+      1    0.0%    0.0%  t __ZNSt3__112__hash_tableImNS_4hashImEENS_8equal_toImEENS_9allocatorImEEE8__rehashEm
+      1    0.0%    0.0%  t __ZN4node9JSUDPWrap12GetAsyncWrapEv
+      1    0.0%    0.0%  t __ZN4node2fsL5FStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  t __ZN4node2fs20FillGlobalStatsArrayEPNS0_11BindingDataEbPK9uv_stat_tb
+      1    0.0%    0.0%  t __ZN4node2fs14FillStatsArrayIdN2v812Float64ArrayEEEvPNS_17AliasedBufferBaseIT_T0_NSt3__19enable_ifIXsr3std9is_scalarIS5_EE5valueEvE4typeEEEPK9uv_stat_tm
+      1    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser9UnconsumeERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser19on_headers_completeEv
+      1    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser12OnStreamReadElRK8uv_buf_t
+      1    0.0%    0.0%  t __ZN4node10StreamBase8ShutdownEN2v85LocalINS1_6ObjectEEE
+      1    0.0%    0.0%  t __ZN4node10AsyncHooks18push_async_contextEddN2v85LocalINS1_6ObjectEEE
+      1    0.0%    0.0%  t __ZN4node10AsyncHooks17pop_async_contextEd
+      1    0.0%    0.0%  t __ZN2v8L15InternalFieldOKENS_8internal6HandleINS0_10JSReceiverEEEiPKc
+      1    0.0%    0.0%  t __ZN2v88internalL35Builtin_Impl_NumberPrototypeToFixedENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      1    0.0%    0.0%  t __ZN2v88internal22HandleScopeImplementer12EnterContextENS0_7ContextE
+      1    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_130FinalizeUnoptimizedCompilationEPNS0_7IsolateENS0_6HandleINS0_6ScriptEEERKNS0_23UnoptimizedCompileFlagsEPKNS0_23UnoptimizedCompileStateERKNSt3__16vectorINS0_34FinalizeUnoptimizedCompilationDataENSD_9allocatorISF_EEEE
+      1    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_121CreateDynamicFunctionEPNS0_7IsolateENS0_16BuiltinArgumentsEPKc
+      1    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_116Fast_ArrayConcatEPNS0_7IsolateEPNS0_16BuiltinArgumentsE
+      1    0.0%    0.0%  t __ZN2v88internal10JSReceiver11HasPropertyENS0_6HandleIS1_EENS2_INS0_4NameEEE
+      1    0.0%    0.0%  T _task_policy_set
+      1    0.0%    0.0%  T _setrlimit
+      1    0.0%    0.0%  T _pthread_atfork
+      1    0.0%    0.0%  T _platform_task_copy_next_thread
+      1    0.0%    0.0%  T _os_packet_get_transport_traffic_realtime
+      1    0.0%    0.0%  T _mach_msg_destroy
+      1    0.0%    0.0%  T __simple_vdprintf
+      1    0.0%    0.0%  T __kernelrpc_mach_vm_protect_trap
+      1    0.0%    0.0%  T ___getdirentries64
+      1    0.0%    0.0%  T __ZThn88_N4node15LibuvStreamWrap9IsIPCPipeEv
+      1    0.0%    0.0%  T __ZThn88_N4node15LibuvStreamWrap10DoShutdownEPNS_12ShutdownWrapE
+      1    0.0%    0.0%  T __ZNK4node9AsyncWrap18IsDoneInitializingEv
+      1    0.0%    0.0%  T __ZNK2v88TryCatch9HasCaughtEv
+      1    0.0%    0.0%  T __ZNK2v88Function29NewInstanceWithSideEffectTypeENS_5LocalINS_7ContextEEEiPNS1_INS_5ValueEEENS_14SideEffectTypeE
+      1    0.0%    0.0%  T __ZNK2v87Integer5ValueEv
+      1    0.0%    0.0%  T __ZNK2v86String9WriteUtf8EPNS_7IsolateEPciPii
+      1    0.0%    0.0%  T __ZNK2v86String17IsExternalOneByteEv
+      1    0.0%    0.0%  T __ZNK2v86Number5ValueEv
+      1    0.0%    0.0%  T __ZNK2v85Value8IsObjectEv
+      1    0.0%    0.0%  T __ZNK2v85Value8IsNumberEv
+      1    0.0%    0.0%  T __ZNK2v85Value7IsInt32Ev
+      1    0.0%    0.0%  T __ZNK2v85Value17IsArrayBufferViewEv
+      1    0.0%    0.0%  T __ZNK2v85Value12IntegerValueENS_5LocalINS_7ContextEEE
+      1    0.0%    0.0%  T __ZNK2v85Value10IsFunctionEv
+      1    0.0%    0.0%  T __ZNK2v85Int325ValueEv
+      1    0.0%    0.0%  T __ZNK2v85Array6LengthEv
+      1    0.0%    0.0%  T __ZN4node7TCPWrap3NewERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node6loader10ModuleWrap11InstantiateERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node4EmitEPNS_11EnvironmentEdNS_10AsyncHooks6FieldsEN2v85LocalINS4_8FunctionEEE
+      1    0.0%    0.0%  T __ZN4node2fs9FSReqBaseD2Ev
+      1    0.0%    0.0%  T __ZN4node2fs9AfterStatEP7uv_fs_s
+      1    0.0%    0.0%  T __ZN4node2fs13FSReqCallback14SetReturnValueERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node27DTRACE_HTTP_SERVER_RESPONSEERKN2v820FunctionCallbackInfoINS0_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node26DTRACE_HTTP_SERVER_REQUESTERKN2v820FunctionCallbackInfoINS0_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node22PerIsolatePlatformData17RunForegroundTaskENSt3__110unique_ptrIN2v84TaskENS1_14default_deleteIS4_EEEE
+      1    0.0%    0.0%  T __ZN4node22PerIsolatePlatformData10FlushTasksEP10uv_async_s
+      1    0.0%    0.0%  T __ZN4node19CreateProcessObjectEPNS_11EnvironmentE
+      1    0.0%    0.0%  T __ZN4node15dtrace_gc_startEPN2v87IsolateENS0_6GCTypeENS0_15GCCallbackFlagsEPv
+      1    0.0%    0.0%  T __ZN4node15LibuvStreamWrap15AfterUvShutdownEP13uv_shutdown_si
+      1    0.0%    0.0%  T __ZN4node14StreamListenerD2Ev
+      1    0.0%    0.0%  T __ZN4node14ConnectionWrapINS_7TCPWrapE8uv_tcp_sE12OnConnectionEP11uv_stream_si
+      1    0.0%    0.0%  T __ZN4node13native_module15NativeModuleEnv15ModuleIdsGetterEN2v85LocalINS2_4NameEEERKNS2_20PropertyCallbackInfoINS2_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node13ParseEncodingEPN2v87IsolateENS0_5LocalINS0_5ValueEEENS_8encodingE
+      1    0.0%    0.0%  T __ZN4node12NodePlatform22CurrentClockTimeMillisEv
+      1    0.0%    0.0%  T __ZN4node11StringBytes11StorageSizeEPN2v87IsolateENS1_5LocalINS1_5ValueEEENS_8encodingE
+      1    0.0%    0.0%  T __ZN4node11Environment17RunWeakRefCleanupEv
+      1    0.0%    0.0%  T __ZN4node11BufferValueC2EPN2v87IsolateENS1_5LocalINS1_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node10contextify17ContextifyContext11MakeContextERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node10StreamBase6WritevERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node10StreamBase11WriteStringILNS_8encodingE4EEEiRKN2v820FunctionCallbackInfoINS3_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node10HandleWrap7OnCloseEP11uv_handle_s
+      1    0.0%    0.0%  T __ZN4node10HandleWrap5CloseEN2v85LocalINS1_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node10BaseObject16InternalFieldSetILi2EXadL_ZNK2v85Value10IsFunctionEvEEEEvNS2_5LocalINS2_6StringEEENS4_IS3_EERKNS2_20PropertyCallbackInfoIvEE
+      1    0.0%    0.0%  T __ZN2v88internal9Accessors23IsJSObjectFieldAccessorEPNS0_7IsolateENS0_6HandleINS0_3MapEEENS4_INS0_4NameEEEPNS0_10FieldIndexE
+      1    0.0%    0.0%  T __ZN2v88internal8Builtins7builtinEi
+      1    0.0%    0.0%  T __ZN2v88internal8Builtins14builtin_handleEi
+      1    0.0%    0.0%  T __ZN2v88internal8Builtins11CallableForEPNS0_7IsolateENS1_4NameE
+      1    0.0%    0.0%  T __ZN2v88internal5Scope22FindVariableDeclaredInEPS1_NS0_12VariableModeE
+      1    0.0%    0.0%  T __ZN2v88internal32Builtin_GlobalDecodeURIComponentEiPmPNS0_7IsolateE
+      1    0.0%    0.0%  T __ZN2v88internal31Builtin_ObjectPrototypeSetProtoEiPmPNS0_7IsolateE
+      1    0.0%    0.0%  T __ZN2v88internal25FunctionCallbackArgumentsC1EPNS0_7IsolateENS0_6ObjectENS0_10HeapObjectES4_S5_Pmi
+      1    0.0%    0.0%  T __ZN2v88internal23Builtin_DateConstructorEiPmPNS0_7IsolateE
+      1    0.0%    0.0%  T __ZN2v88internal22HandleScopeImplementer11IterateThisEPNS0_11RootVisitorE
+      1    0.0%    0.0%  T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+      1    0.0%    0.0%  T __ZN2v88internal20Builtin_ArrayUnshiftEiPmPNS0_7IsolateE
+      1    0.0%    0.0%  T __ZN2v88internal16DeclarationScope16DeclareArgumentsEPNS0_15AstValueFactoryE
+      1    0.0%    0.0%  T __ZN2v88internal16CompareOperation25IsLiteralCompareUndefinedEPPNS0_10ExpressionE
+      1    0.0%    0.0%  T __ZN2v88TryCatchD1Ev
+      1    0.0%    0.0%  T __ZN2v88TryCatch10SetVerboseEb
+      1    0.0%    0.0%  T __ZN2v87Isolate17GetCurrentContextEv
+      1    0.0%    0.0%  T __ZN2v86Object3NewEPNS_7IsolateE
+      1    0.0%    0.0%  T __ZN2v86Object32SetAlignedPointerInInternalFieldEiPv
+      1    0.0%    0.0%  T __ZN2v86Object18InternalFieldCountEv
+      1    0.0%    0.0%  T __ZN2v86Number3NewEPNS_7IsolateEd
+      1    0.0%    0.0%  T __ZN2v82V818GlobalizeReferenceEPNS_8internal7IsolateEPm
+      1    0.0%    0.0%  T __ZN2v82V813DisposeGlobalEPm
+      1    0.0%    0.0%  T __ZN2v820EscapableHandleScopeC2EPNS_7IsolateE
+      1    0.0%    0.0%  T __ZN2v816FunctionTemplate11GetFunctionENS_5LocalINS_7ContextEEE
+      1    0.0%    0.0%  T __ZN2v815MicrotasksScope17PerformCheckpointEPNS_7IsolateE
+      1    0.0%    0.0%  T __ZN2v811HandleScopeC1EPNS_7IsolateE
+
+ [Summary]:
+   ticks  total  nonlib   name
+   6541    5.8%    5.8%  JavaScript
+  105393   93.8%   94.1%  C++
+    723    0.6%    0.6%  GC
+    266    0.2%          Shared libraries
+    116    0.1%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+   2363   61.9%    2.1%  T __ZN2v88internal8Compiler30GetSharedFunctionInfoForScriptEPNS0_7IsolateENS0_6HandleINS0_6StringEEERKNS1_13ScriptDetailsENS_19ScriptOriginOptionsEPNS_9ExtensionEPNS0_10ScriptDataENS_14ScriptCompiler14CompileOptionsENSF_13NoCacheReasonENS0_11NativesFlagE
+    481   12.6%    0.4%  T ___psynch_mutexwait
+    384   10.1%    0.3%  T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+    121    3.2%    0.1%  T _chmod
+    101    2.6%    0.1%  T __ZN2v88internal28Builtin_ObjectDefinePropertyEiPmPNS0_7IsolateE
+    100    2.6%    0.1%  T _semaphore_create
+     31    0.8%    0.0%  T __ZN2v88internal30Builtin_ArrayBufferConstructorEiPmPNS0_7IsolateE
+     26    0.7%    0.0%  T __ZN2v88internal31Builtin_ObjectPrototypeSetProtoEiPmPNS0_7IsolateE
+     24    0.6%    0.0%  t __ZN4node9inspector12_GLOBAL__N_120InspectorConsoleCallERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     17    0.4%    0.0%  T ___commpage_gettimeofday
+     15    0.4%    0.0%  T __ZN2v88internal32Builtin_DatePrototypeToUTCStringEiPmPNS0_7IsolateE
+     13    0.3%    0.0%  T ___workq_kernreturn
+     13    0.3%    0.0%  T __ZN2v88internal30Builtin_NumberPrototypeToFixedEiPmPNS0_7IsolateE
+     12    0.3%    0.0%  T _getattrlist
+     12    0.3%    0.0%  T __ZN2v88internal23Builtin_DateConstructorEiPmPNS0_7IsolateE
+      7    0.2%    0.0%  T __ZThn88_N4node15LibuvStreamWrap7IsAliveEv
+      5    0.1%    0.0%  T __ZNK2v85Value8ToStringENS_5LocalINS_7ContextEEE
+      4    0.1%    0.0%  T _pthread_rwlock_init
+      4    0.1%    0.0%  T __ZN2v88internal20Builtin_ArrayUnshiftEiPmPNS0_7IsolateE
+      4    0.1%    0.0%  T __ZN2v88internal17Builtin_SymbolForEiPmPNS0_7IsolateE
+      4    0.1%    0.0%  T __ZN2v88internal17Builtin_JsonParseEiPmPNS0_7IsolateE
+      3    0.1%    0.0%  T __ZN4node10StreamBase11WriteBufferERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      3    0.1%    0.0%  T __ZN2v88internal33Builtin_TypedArrayPrototypeBufferEiPmPNS0_7IsolateE
+      3    0.1%    0.0%  T __ZN2v88internal27Builtin_FunctionConstructorEiPmPNS0_7IsolateE
+      3    0.1%    0.0%  T __ZN2v811ArrayBuffer15GetBackingStoreEv
+      2    0.1%    0.0%  t __ZN4node12_GLOBAL__N_16Parser4FreeERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      2    0.1%    0.0%  t __ZN4node10task_queueL13RunMicrotasksERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.1%    0.0%  t __ZN2v88internal25FunctionCallbackArguments4CallENS0_15CallHandlerInfoE
+      2    0.1%    0.0%  t __ZN2v88internal12_GLOBAL__N_119HandleApiCallHelperILb0EEENS0_11MaybeHandleINS0_6ObjectEEEPNS0_7IsolateENS0_6HandleINS0_10HeapObjectEEESA_NS8_INS0_20FunctionTemplateInfoEEENS8_IS4_EENS0_16BuiltinArgumentsE
+      2    0.1%    0.0%  T __ZNK2v812BackingStore4DataEv
+      2    0.1%    0.0%  T __ZN4node6Buffer4DataEN2v85LocalINS1_5ValueEEE
+      2    0.1%    0.0%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_8ShutdownERKN2v820FunctionCallbackInfoINS2_5ValueEEEEEEEvS7_
+      2    0.1%    0.0%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_11WriteStringILNS_8encodingE1EEEiRKN2v820FunctionCallbackInfoINS4_5ValueEEEEEEEvS9_
+      2    0.1%    0.0%  T __ZN4node10StreamBase11WriteStringILNS_8encodingE1EEEiRKN2v820FunctionCallbackInfoINS3_5ValueEEE
+      2    0.1%    0.0%  T __ZN2v88internal32Builtin_GlobalDecodeURIComponentEiPmPNS0_7IsolateE
+      2    0.1%    0.0%  T __ZN2v88internal15Builtin_DateNowEiPmPNS0_7IsolateE
+      1    0.0%    0.0%  t __pthread_wqthread_exit
+      1    0.0%    0.0%  t __pthread_tsd_cleanup
+      1    0.0%    0.0%  t __pthread_mutex_global_init
+      1    0.0%    0.0%  t __ZN4node2fsL4StatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  t __ZN4node2fsL4OpenERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser9UnconsumeERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser10InitializeERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.0%    0.0%  t __ZN4node10StreamBase8ShutdownEN2v85LocalINS1_6ObjectEEE
+      1    0.0%    0.0%  t __ZN2v88internalL26Builtin_Impl_HandleApiCallENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      1    0.0%    0.0%  t __ZN2v88internal6String7FlattenEPNS0_7IsolateENS0_6HandleIS1_EENS0_14AllocationTypeE
+      1    0.0%    0.0%  t __ZN2v88internal19SequentialStringKeyIhE7IsMatchENS0_6StringE
+      1    0.0%    0.0%  t __ZN2v88internal11StringShape33DispatchToSpecificTypeWithoutCastIZNS1_22DispatchToSpecificTypeIZNS0_6String3GetEiE19StringGetDispatchertJRiEEET0_S4_DpOT1_E17CastingDispatchertJRS4_S6_EEES7_SA_
+      1    0.0%    0.0%  T _setrlimit
+      1    0.0%    0.0%  T _pthread_atfork
+      1    0.0%    0.0%  T __ZThn88_N4node15LibuvStreamWrap9IsIPCPipeEv
+      1    0.0%    0.0%  T __ZThn88_N4node15LibuvStreamWrap10DoShutdownEPNS_12ShutdownWrapE
+      1    0.0%    0.0%  T __ZNK4node9AsyncWrap18IsDoneInitializingEv
+      1    0.0%    0.0%  T __ZNK2v87Integer5ValueEv
+      1    0.0%    0.0%  T __ZNK2v86String9WriteUtf8EPNS_7IsolateEPciPii
+      1    0.0%    0.0%  T __ZNK2v86String17IsExternalOneByteEv
+      1    0.0%    0.0%  T __ZNK2v86Number5ValueEv
+      1    0.0%    0.0%  T __ZNK2v85Value8IsObjectEv
+      1    0.0%    0.0%  T __ZNK2v85Value8IsNumberEv
+      1    0.0%    0.0%  T __ZNK2v85Value17IsArrayBufferViewEv
+      1    0.0%    0.0%  T __ZNK2v85Int325ValueEv
+      1    0.0%    0.0%  T __ZN4node9AsyncWrap21EmitTraceEventDestroyEv
+      1    0.0%    0.0%  T __ZN4node9AsyncWrap10AsyncResetEN2v85LocalINS1_6ObjectEEEdb
+      1    0.0%    0.0%  T __ZN4node2fs13FSReqCallback14SetReturnValueERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node26DTRACE_HTTP_SERVER_REQUESTERKN2v820FunctionCallbackInfoINS0_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node13ParseEncodingEPN2v87IsolateENS0_5LocalINS0_5ValueEEENS_8encodingE
+      1    0.0%    0.0%  T __ZN4node11StringBytes11StorageSizeEPN2v87IsolateENS1_5LocalINS1_5ValueEEENS_8encodingE
+      1    0.0%    0.0%  T __ZN4node11BufferValueC2EPN2v87IsolateENS1_5LocalINS1_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node10StreamBase6WritevERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node10StreamBase11WriteStringILNS_8encodingE4EEEiRKN2v820FunctionCallbackInfoINS3_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node10HandleWrap5CloseEN2v85LocalINS1_5ValueEEE
+      1    0.0%    0.0%  T __ZN2v88internal19Builtin_ArrayConcatEiPmPNS0_7IsolateE
+      1    0.0%    0.0%  T __ZN2v86Object18InternalFieldCountEv
+      1    0.0%    0.0%  T __ZN2v86Number3NewEPNS_7IsolateEd
+      1    0.0%    0.0%  T __ZN2v815MicrotasksScope17PerformCheckpointEPNS_7IsolateE
+      1    0.0%    0.0%  T __ZN2v811HandleScopeD1Ev
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  100526   89.5%  T _host_info
+
+   2875    2.6%  T __ZN2v88internal8Compiler30GetSharedFunctionInfoForScriptEPNS0_7IsolateENS0_6HandleINS0_6StringEEERKNS1_13ScriptDetailsENS_19ScriptOriginOptionsEPNS_9ExtensionEPNS0_10ScriptDataENS_14ScriptCompiler14CompileOptionsENSF_13NoCacheReasonENS0_11NativesFlagE
+    818   28.5%    T __ZN2v88internal8Compiler30GetSharedFunctionInfoForScriptEPNS0_7IsolateENS0_6HandleINS0_6StringEEERKNS1_13ScriptDetailsENS_19ScriptOriginOptionsEPNS_9ExtensionEPNS0_10ScriptDataENS_14ScriptCompiler14CompileOptionsENSF_13NoCacheReasonENS0_11NativesFlagE
+    199   24.3%      T __ZN2v88internal8Compiler30GetSharedFunctionInfoForScriptEPNS0_7IsolateENS0_6HandleINS0_6StringEEERKNS1_13ScriptDetailsENS_19ScriptOriginOptionsEPNS_9ExtensionEPNS0_10ScriptDataENS_14ScriptCompiler14CompileOptionsENSF_13NoCacheReasonENS0_11NativesFlagE
+     73   36.7%        LazyCompile: *applyStyle /Users/sam/CodeLab/node-geek/node_modules/koa-logger/node_modules/chalk/index.js:159:20
+     42   57.5%          LazyCompile: *logger /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:57:32
+     41   97.6%            LazyCompile: *handleRequest /Users/sam/CodeLab/node-geek/node_modules/koa/lib/application.js:162:16
+      1    2.4%            LazyCompile: ~dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+     25   34.2%          LazyCompile: *log /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:108:14
+     21   84.0%            LazyCompile: ~done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+      4   16.0%            LazyCompile: *done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+      6    8.2%          LazyCompile: ~builder /Users/sam/CodeLab/node-geek/node_modules/koa-logger/node_modules/chalk/index.js:120:27
+      5   83.3%            LazyCompile: ~logger /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:57:32
+      1   16.7%            LazyCompile: ~log /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:108:14
+     62   31.2%        LazyCompile: *log /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:108:14
+     41   66.1%          LazyCompile: ~done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+     41  100.0%            LazyCompile: *onceWrapper events.js:416:21
+     21   33.9%          LazyCompile: *done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+     21  100.0%            LazyCompile: *onceWrapper events.js:416:21
+      9    4.5%        LazyCompile: ~format /Users/sam/CodeLab/node-geek/node_modules/bytes/index.js:84:16
+      9  100.0%          LazyCompile: ~bytes /Users/sam/CodeLab/node-geek/node_modules/bytes/index.js:54:15
+      9  100.0%            LazyCompile: ~log /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:108:14
+      8    4.0%        LazyCompile: *get /Users/sam/CodeLab/node-geek/node_modules/koa/lib/response.js:416:6
+      7   87.5%          LazyCompile: *send /Users/sam/CodeLab/node-geek/node_modules/koa-send/index.js:50:21
+      7  100.0%            T __ZN2v88internal8Compiler30GetSharedFunctionInfoForScriptEPNS0_7IsolateENS0_6HandleINS0_6StringEEERKNS1_13ScriptDetailsENS_19ScriptOriginOptionsEPNS_9ExtensionEPNS0_10ScriptDataENS_14ScriptCompiler14CompileOptionsENSF_13NoCacheReasonENS0_11NativesFlagE
+      1   12.5%          LazyCompile: ~get type /Users/sam/CodeLab/node-geek/node_modules/koa/lib/response.js:380:11
+      1  100.0%            LazyCompile: *send /Users/sam/CodeLab/node-geek/node_modules/koa-send/index.js:50:21
+      7    3.5%        LazyCompile: *<anonymous> /Users/sam/CodeLab/node-geek/node_modules/koa-mount/index.js:48:25
+      4   57.1%          LazyCompile: ~dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      4  100.0%            LazyCompile: *<anonymous> /Users/sam/CodeLab/node-geek/node_modules/koa-mount/index.js:48:25
+      3   42.9%          LazyCompile: *dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      3  100.0%            LazyCompile: *<anonymous> /Users/sam/CodeLab/node-geek/node_modules/koa-mount/index.js:48:25
+      5    2.5%        LazyCompile: *send /Users/sam/CodeLab/node-geek/node_modules/koa-send/index.js:50:21
+      3   60.0%          LazyCompile: *serve /Users/sam/CodeLab/node-geek/node_modules/koa-static/index.js:39:33
+      2   66.7%            LazyCompile: ~dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      1   33.3%            LazyCompile: *dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      2   40.0%          T __ZN2v88internal8Compiler30GetSharedFunctionInfoForScriptEPNS0_7IsolateENS0_6HandleINS0_6StringEEERKNS1_13ScriptDetailsENS_19ScriptOriginOptionsEPNS_9ExtensionEPNS0_10ScriptDataENS_14ScriptCompiler14CompileOptionsENSF_13NoCacheReasonENS0_11NativesFlagE
+      4    2.0%        LazyCompile: ~module.exports /Users/sam/CodeLab/node-geek/node_modules/humanize-number/index.js:2:26
+      4  100.0%          LazyCompile: ~time /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:152:15
+      4  100.0%            LazyCompile: ~log /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:108:14
+      4    2.0%        LazyCompile: *encodings /Users/sam/CodeLab/node-geek/node_modules/negotiator/index.js:55:52
+      3   75.0%          LazyCompile: *Accepts.encoding.Accepts.encodings /Users/sam/CodeLab/node-geek/node_modules/accepts/index.js:127:40
+      2   66.7%            LazyCompile: ~acceptsEncodings /Users/sam/CodeLab/node-geek/node_modules/koa/lib/request.js:572:19
+      1   33.3%            LazyCompile: *acceptsEncodings /Users/sam/CodeLab/node-geek/node_modules/koa/lib/request.js:572:19
+      1   25.0%          LazyCompile: ~Accepts.encoding.Accepts.encodings /Users/sam/CodeLab/node-geek/node_modules/accepts/index.js:127:40
+      1  100.0%            LazyCompile: ~acceptsEncodings /Users/sam/CodeLab/node-geek/node_modules/koa/lib/request.js:572:19
+      3    1.5%        LazyCompile: ~<anonymous> internal/per_context/primordials.js:23:10
+      1   33.3%          LazyCompile: ~resolvePackageTargetString internal/modules/esm/resolve.js:317:36
+      1  100.0%            LazyCompile: ~resolvePackageTarget internal/modules/esm/resolve.js:371:30
+      1   33.3%          LazyCompile: ~resolveExports internal/modules/cjs/loader.js:422:24
+      1  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      1   33.3%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:796:35
+      3    1.5%        LazyCompile: *getHeaders _http_outgoing.js:590:59
+      3  100.0%          LazyCompile: ~get header /Users/sam/CodeLab/node-geek/node_modules/koa/lib/response.js:47:13
+      3  100.0%            LazyCompile: ~get /Users/sam/CodeLab/node-geek/node_modules/koa/lib/response.js:416:6
+      2    1.0%        LazyCompile: ~isHidden /Users/sam/CodeLab/node-geek/node_modules/koa-send/index.js:162:19
+      2  100.0%          LazyCompile: ~send /Users/sam/CodeLab/node-geek/node_modules/koa-send/index.js:50:21
+      2  100.0%            LazyCompile: ~serve /Users/sam/CodeLab/node-geek/node_modules/koa-static/index.js:39:33
+      2    1.0%        LazyCompile: *set /Users/sam/CodeLab/node-geek/node_modules/koa/lib/response.js:459:6
+      2  100.0%          LazyCompile: *proto.<computed> /Users/sam/CodeLab/node-geek/node_modules/delegates/index.js:39:25
+      2  100.0%            LazyCompile: *send /Users/sam/CodeLab/node-geek/node_modules/koa-send/index.js:50:21
+     79    9.7%      LazyCompile: *applyStyle /Users/sam/CodeLab/node-geek/node_modules/koa-logger/node_modules/chalk/index.js:159:20
+     42   53.2%        LazyCompile: *log /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:108:14
+     25   59.5%          LazyCompile: ~done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+     25  100.0%            LazyCompile: *onceWrapper events.js:416:21
+     17   40.5%          LazyCompile: *done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+     17  100.0%            LazyCompile: *onceWrapper events.js:416:21
+     31   39.2%        LazyCompile: *logger /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:57:32
+     29   93.5%          LazyCompile: *handleRequest /Users/sam/CodeLab/node-geek/node_modules/koa/lib/application.js:162:16
+     29  100.0%            LazyCompile: ~handleRequest /Users/sam/CodeLab/node-geek/node_modules/koa/lib/application.js:148:27
+      2    6.5%          LazyCompile: ~dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      2  100.0%            LazyCompile: ~<anonymous> /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:31:19
+      6    7.6%        LazyCompile: ~builder /Users/sam/CodeLab/node-geek/node_modules/koa-logger/node_modules/chalk/index.js:120:27
+      3   50.0%          LazyCompile: ~logger /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:57:32
+      3  100.0%            LazyCompile: ~dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      3   50.0%          LazyCompile: ~log /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:108:14
+      3  100.0%            LazyCompile: ~done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+     51    6.2%      LazyCompile: *Socket net.js:268:16
+     34   66.7%        LazyCompile: *onconnection net.js:1531:22
+     17   33.3%        LazyCompile: ~onconnection net.js:1531:22
+     40    4.9%      LazyCompile: *send /Users/sam/CodeLab/node-geek/node_modules/koa-send/index.js:50:21
+     24   60.0%        LazyCompile: *serve /Users/sam/CodeLab/node-geek/node_modules/koa-static/index.js:39:33
+     17   70.8%          LazyCompile: *dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+     17  100.0%            LazyCompile: *<anonymous> /Users/sam/CodeLab/node-geek/node_modules/koa-mount/index.js:48:25
+      7   29.2%          LazyCompile: ~dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      7  100.0%            LazyCompile: *<anonymous> /Users/sam/CodeLab/node-geek/node_modules/koa-mount/index.js:48:25
+     11   27.5%        T __ZN2v88internal8Compiler30GetSharedFunctionInfoForScriptEPNS0_7IsolateENS0_6HandleINS0_6StringEEERKNS1_13ScriptDetailsENS_19ScriptOriginOptionsEPNS_9ExtensionEPNS0_10ScriptDataENS_14ScriptCompiler14CompileOptionsENSF_13NoCacheReasonENS0_11NativesFlagE
+      5   12.5%        LazyCompile: ~serve /Users/sam/CodeLab/node-geek/node_modules/koa-static/index.js:39:33
+      3   60.0%          LazyCompile: ~dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      3  100.0%            LazyCompile: *<anonymous> /Users/sam/CodeLab/node-geek/node_modules/koa-mount/index.js:48:25
+      2   40.0%          LazyCompile: *dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      2  100.0%            LazyCompile: *<anonymous> /Users/sam/CodeLab/node-geek/node_modules/koa-mount/index.js:48:25
+     27    3.3%      LazyCompile: *parse url.js:159:37
+     18   66.7%        LazyCompile: *<anonymous> /Users/sam/CodeLab/node-geek/client/index.js:11:9
+     12   66.7%          LazyCompile: *dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+     12  100.0%            LazyCompile: *logger /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:57:32
+      6   33.3%          LazyCompile: ~dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      6  100.0%            LazyCompile: *logger /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:57:32
+      9   33.3%        LazyCompile: ~urlParse url.js:151:18
+      9  100.0%          LazyCompile: ~<anonymous> /Users/sam/CodeLab/node-geek/client/index.js:11:9
+      9  100.0%            LazyCompile: ~dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+     24    2.9%      LazyCompile: *encodings /Users/sam/CodeLab/node-geek/node_modules/negotiator/index.js:55:52
+     20   83.3%        LazyCompile: *Accepts.encoding.Accepts.encodings /Users/sam/CodeLab/node-geek/node_modules/accepts/index.js:127:40
+     17   85.0%          LazyCompile: ~acceptsEncodings /Users/sam/CodeLab/node-geek/node_modules/koa/lib/request.js:572:19
+     17  100.0%            LazyCompile: *send /Users/sam/CodeLab/node-geek/node_modules/koa-send/index.js:50:21
+      3   15.0%          LazyCompile: *acceptsEncodings /Users/sam/CodeLab/node-geek/node_modules/koa/lib/request.js:572:19
+      3  100.0%            LazyCompile: *send /Users/sam/CodeLab/node-geek/node_modules/koa-send/index.js:50:21
+      4   16.7%        LazyCompile: ~Accepts.encoding.Accepts.encodings /Users/sam/CodeLab/node-geek/node_modules/accepts/index.js:127:40
+      4  100.0%          LazyCompile: ~acceptsEncodings /Users/sam/CodeLab/node-geek/node_modules/koa/lib/request.js:572:19
+      3   75.0%            LazyCompile: *send /Users/sam/CodeLab/node-geek/node_modules/koa-send/index.js:50:21
+      1   25.0%            LazyCompile: *proto.<computed> /Users/sam/CodeLab/node-geek/node_modules/delegates/index.js:39:25
+     22    2.7%      LazyCompile: *getColorDepth internal/tty.js:102:23
+     12   54.5%        LazyCompile: *value internal/console/constructor.js:321:20
+     12  100.0%          LazyCompile: ~log internal/console/constructor.js:357:6
+     12  100.0%            t __ZN4node9inspector12_GLOBAL__N_120InspectorConsoleCallERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     10   45.5%        LazyCompile: *log internal/console/constructor.js:357:6
+     10  100.0%          t __ZN4node9inspector12_GLOBAL__N_120InspectorConsoleCallERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      7   70.0%            LazyCompile: *logger /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:57:32
+      3   30.0%            LazyCompile: *log /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:108:14
+     14    1.7%      LazyCompile: *set /Users/sam/CodeLab/node-geek/node_modules/koa/lib/response.js:459:6
+     14  100.0%        LazyCompile: *proto.<computed> /Users/sam/CodeLab/node-geek/node_modules/delegates/index.js:39:25
+     14  100.0%          LazyCompile: *send /Users/sam/CodeLab/node-geek/node_modules/koa-send/index.js:50:21
+     14  100.0%            T __ZN2v88internal8Compiler30GetSharedFunctionInfoForScriptEPNS0_7IsolateENS0_6HandleINS0_6StringEEERKNS1_13ScriptDetailsENS_19ScriptOriginOptionsEPNS_9ExtensionEPNS0_10ScriptDataENS_14ScriptCompiler14CompileOptionsENSF_13NoCacheReasonENS0_11NativesFlagE
+     13    1.6%      LazyCompile: *writeHead _http_server.js:250:19
+     13  100.0%        LazyCompile: *ondata internal/streams/readable.js:717:18
+     13  100.0%          LazyCompile: *readableAddChunk internal/streams/readable.js:231:26
+     13  100.0%            LazyCompile: *wrapper fs.js:537:19
+     12    1.5%      LazyCompile: *ReadableState internal/streams/readable.js:90:23
+      8   66.7%        LazyCompile: *Socket net.js:268:16
+      6   75.0%          LazyCompile: *onconnection net.js:1531:22
+      2   25.0%          LazyCompile: ~onconnection net.js:1531:22
+      3   25.0%        LazyCompile: ~Readable internal/streams/readable.js:187:18
+      2   66.7%          LazyCompile: ~Duplex internal/streams/duplex.js:52:16
+      2  100.0%            LazyCompile: ~Socket net.js:268:16
+      1   33.3%          LazyCompile: ~IncomingMessage _http_incoming.js:42:25
+      1  100.0%            LazyCompile: ~parserOnHeadersComplete _http_common.js:75:33
+      1    8.3%        LazyCompile: *parserOnHeadersComplete _http_common.js:75:33
+     11    1.3%      LazyCompile: *_storeHeader _http_outgoing.js:360:22
+      9   81.8%        LazyCompile: *writeHead _http_server.js:250:19
+      9  100.0%          LazyCompile: *ondata internal/streams/readable.js:717:18
+      9  100.0%            LazyCompile: *readableAddChunk internal/streams/readable.js:231:26
+      2   18.2%        LazyCompile: ~writeHead _http_server.js:250:19
+      2  100.0%          LazyCompile: *ondata internal/streams/readable.js:717:18
+      2  100.0%            LazyCompile: *readableAddChunk internal/streams/readable.js:231:26
+     11    1.3%      LazyCompile: *Readable.on internal/streams/readable.js:857:33
+      6   54.5%        LazyCompile: *connectionListenerInternal _http_server.js:418:36
+      3   50.0%          LazyCompile: ~defaultTriggerAsyncIdScope internal/async_hooks.js:421:36
+      3  100.0%            LazyCompile: ~connectionListener _http_server.js:412:28
+      3   50.0%          LazyCompile: *defaultTriggerAsyncIdScope internal/async_hooks.js:421:36
+      3  100.0%            LazyCompile: ~connectionListener _http_server.js:412:28
+      3   27.3%        LazyCompile: *once events.js:434:44
+      3  100.0%          LazyCompile: ~<anonymous> internal/console/constructor.js:337:10
+      3  100.0%            LazyCompile: *afterWriteTick internal/streams/writable.js:451:24
+      1    9.1%        LazyCompile: ~destroyReadStream /Users/sam/CodeLab/node-geek/node_modules/destroy/index.js:54:27
+      1  100.0%          LazyCompile: ~destroy /Users/sam/CodeLab/node-geek/node_modules/destroy/index.js:31:17
+      1  100.0%            LazyCompile: ~listener /Users/sam/CodeLab/node-geek/node_modules/on-finished/index.js:161:20
+      1    9.1%        LazyCompile: ~connectionListenerInternal _http_server.js:418:36
+      1  100.0%          LazyCompile: ~defaultTriggerAsyncIdScope internal/async_hooks.js:421:36
+      1  100.0%            LazyCompile: ~connectionListener _http_server.js:412:28
+     11    1.3%      LazyCompile: *<anonymous> /Users/sam/CodeLab/node-geek/node_modules/koa-mount/index.js:48:25
+      7   63.6%        LazyCompile: ~dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      6   85.7%          LazyCompile: *<anonymous> /Users/sam/CodeLab/node-geek/node_modules/koa-mount/index.js:48:25
+      6  100.0%            LazyCompile: ~dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      1   14.3%          LazyCompile: *<anonymous> /Users/sam/CodeLab/node-geek/client/index.js:11:9
+      1  100.0%            LazyCompile: ~dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      2   18.2%        T __ZN2v88internal8Compiler30GetSharedFunctionInfoForScriptEPNS0_7IsolateENS0_6HandleINS0_6StringEEERKNS1_13ScriptDetailsENS_19ScriptOriginOptionsEPNS_9ExtensionEPNS0_10ScriptDataENS_14ScriptCompiler14CompileOptionsENSF_13NoCacheReasonENS0_11NativesFlagE
+      2   18.2%        LazyCompile: *dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      2  100.0%          LazyCompile: *<anonymous> /Users/sam/CodeLab/node-geek/node_modules/koa-mount/index.js:48:25
+      2  100.0%            LazyCompile: *dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+     10    1.2%      LazyCompile: *log /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:108:14
+      6   60.0%        LazyCompile: ~done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+      6  100.0%          LazyCompile: *onceWrapper events.js:416:21
+      6  100.0%            LazyCompile: *onFinish _http_outgoing.js:764:18
+      4   40.0%        LazyCompile: *done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+      4  100.0%          LazyCompile: *onceWrapper events.js:416:21
+      4  100.0%            LazyCompile: *onFinish _http_outgoing.js:764:18
+    117    4.1%    LazyCompile: *send /Users/sam/CodeLab/node-geek/node_modules/koa-send/index.js:50:21
+     57   48.7%      T __ZN2v88internal8Compiler30GetSharedFunctionInfoForScriptEPNS0_7IsolateENS0_6HandleINS0_6StringEEERKNS1_13ScriptDetailsENS_19ScriptOriginOptionsEPNS_9ExtensionEPNS0_10ScriptDataENS_14ScriptCompiler14CompileOptionsENSF_13NoCacheReasonENS0_11NativesFlagE
+     53   45.3%      LazyCompile: *serve /Users/sam/CodeLab/node-geek/node_modules/koa-static/index.js:39:33
+     31   58.5%        LazyCompile: *dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+     31  100.0%          LazyCompile: *<anonymous> /Users/sam/CodeLab/node-geek/node_modules/koa-mount/index.js:48:25
+     31  100.0%            LazyCompile: *dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+     22   41.5%        LazyCompile: ~dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+     22  100.0%          LazyCompile: *<anonymous> /Users/sam/CodeLab/node-geek/node_modules/koa-mount/index.js:48:25
+     22  100.0%            LazyCompile: ~dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      7    6.0%      LazyCompile: ~serve /Users/sam/CodeLab/node-geek/node_modules/koa-static/index.js:39:33
+      6   85.7%        LazyCompile: ~dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      6  100.0%          LazyCompile: *<anonymous> /Users/sam/CodeLab/node-geek/node_modules/koa-mount/index.js:48:25
+      6  100.0%            LazyCompile: ~dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      1   14.3%        LazyCompile: *dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      1  100.0%          LazyCompile: *<anonymous> /Users/sam/CodeLab/node-geek/node_modules/koa-mount/index.js:48:25
+      1  100.0%            LazyCompile: *dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+     92    3.2%    T __ZN2v88internal28Builtin_ObjectDefinePropertyEiPmPNS0_7IsolateE
+     92  100.0%      LazyCompile: ~build /Users/sam/CodeLab/node-geek/node_modules/koa-logger/node_modules/chalk/index.js:119:15
+     81   88.0%        LazyCompile: *get /Users/sam/CodeLab/node-geek/node_modules/koa-logger/node_modules/chalk/index.js:59:6
+     47   58.0%          LazyCompile: *log /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:108:14
+     28   59.6%            LazyCompile: ~done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+     19   40.4%            LazyCompile: *done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+     31   38.3%          LazyCompile: *logger /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:57:32
+     26   83.9%            LazyCompile: *handleRequest /Users/sam/CodeLab/node-geek/node_modules/koa/lib/application.js:162:16
+      3    9.7%            LazyCompile: ~dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      2    6.5%            LazyCompile: *dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      3    3.7%          LazyCompile: ~log /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:108:14
+      3  100.0%            LazyCompile: ~done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+      6    6.5%        LazyCompile: *log /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:108:14
+      3   50.0%          LazyCompile: ~done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+      3  100.0%            LazyCompile: *onceWrapper events.js:416:21
+      3   50.0%          LazyCompile: *done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+      3  100.0%            LazyCompile: *onceWrapper events.js:416:21
+      5    5.4%        LazyCompile: ~get /Users/sam/CodeLab/node-geek/node_modules/koa-logger/node_modules/chalk/index.js:59:6
+      4   80.0%          LazyCompile: ~log /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:108:14
+      4  100.0%            LazyCompile: ~done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+      1   20.0%          LazyCompile: ~logger /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:57:32
+      1  100.0%            LazyCompile: ~dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+     80    2.8%    LazyCompile: *Socket net.js:268:16
+     62   77.5%      LazyCompile: *onconnection net.js:1531:22
+     18   22.5%      LazyCompile: ~onconnection net.js:1531:22
+     37    1.3%    LazyCompile: *log /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:108:14
+     26   70.3%      LazyCompile: ~done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+     26  100.0%        LazyCompile: *onceWrapper events.js:416:21
+     15   57.7%          LazyCompile: *onFinish _http_outgoing.js:764:18
+     15  100.0%            LazyCompile: *afterWriteTick internal/streams/writable.js:451:24
+     11   42.3%          LazyCompile: *emit events.js:264:44
+     11  100.0%            LazyCompile: ~onFinish _http_outgoing.js:764:18
+     11   29.7%      LazyCompile: *done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+     11  100.0%        LazyCompile: *onceWrapper events.js:416:21
+     11  100.0%          LazyCompile: *onFinish _http_outgoing.js:764:18
+     11  100.0%            LazyCompile: *afterWriteTick internal/streams/writable.js:451:24
+     33    1.1%    LazyCompile: *logger /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:57:32
+     31   93.9%      LazyCompile: *handleRequest /Users/sam/CodeLab/node-geek/node_modules/koa/lib/application.js:162:16
+     29   93.5%        LazyCompile: ~handleRequest /Users/sam/CodeLab/node-geek/node_modules/koa/lib/application.js:148:27
+     21   72.4%          LazyCompile: *parserOnIncoming _http_server.js:809:26
+     21  100.0%            LazyCompile: *parserOnHeadersComplete _http_common.js:75:33
+      8   27.6%          LazyCompile: *emit events.js:264:44
+      8  100.0%            LazyCompile: ~parserOnIncoming _http_server.js:809:26
+      2    6.5%        LazyCompile: *handleRequest /Users/sam/CodeLab/node-geek/node_modules/koa/lib/application.js:148:27
+      2  100.0%          LazyCompile: *parserOnIncoming _http_server.js:809:26
+      2  100.0%            LazyCompile: *parserOnHeadersComplete _http_common.js:75:33
+      2    6.1%      T __ZN2v88internal8Compiler30GetSharedFunctionInfoForScriptEPNS0_7IsolateENS0_6HandleINS0_6StringEEERKNS1_13ScriptDetailsENS_19ScriptOriginOptionsEPNS_9ExtensionEPNS0_10ScriptDataENS_14ScriptCompiler14CompileOptionsENSF_13NoCacheReasonENS0_11NativesFlagE
+     29    1.0%    LazyCompile: ~build /Users/sam/CodeLab/node-geek/node_modules/koa-logger/node_modules/chalk/index.js:119:15
+     24   82.8%      LazyCompile: *get /Users/sam/CodeLab/node-geek/node_modules/koa-logger/node_modules/chalk/index.js:59:6
+     12   50.0%        LazyCompile: *logger /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:57:32
+     12  100.0%          LazyCompile: *handleRequest /Users/sam/CodeLab/node-geek/node_modules/koa/lib/application.js:162:16
+     12  100.0%            LazyCompile: ~handleRequest /Users/sam/CodeLab/node-geek/node_modules/koa/lib/application.js:148:27
+     11   45.8%        LazyCompile: *log /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:108:14
+      7   63.6%          LazyCompile: ~done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+      7  100.0%            LazyCompile: *onceWrapper events.js:416:21
+      4   36.4%          LazyCompile: *done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+      4  100.0%            LazyCompile: *onceWrapper events.js:416:21
+      1    4.2%        LazyCompile: ~logger /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:57:32
+      1  100.0%          LazyCompile: ~dispatch /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:35:23
+      1  100.0%            LazyCompile: ~<anonymous> /Users/sam/CodeLab/node-geek/node_modules/koa-compose/index.js:31:19
+      3   10.3%      LazyCompile: *log /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:108:14
+      2   66.7%        LazyCompile: *done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+      2  100.0%          LazyCompile: *onceWrapper events.js:416:21
+      2  100.0%            LazyCompile: *onFinish _http_outgoing.js:764:18
+      1   33.3%        LazyCompile: ~done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+      1  100.0%          LazyCompile: *onceWrapper events.js:416:21
+      1  100.0%            LazyCompile: *onFinish _http_outgoing.js:764:18
+      2    6.9%      LazyCompile: ~get /Users/sam/CodeLab/node-geek/node_modules/koa-logger/node_modules/chalk/index.js:59:6
+      2  100.0%        LazyCompile: ~log /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:108:14
+      2  100.0%          LazyCompile: ~done /Users/sam/CodeLab/node-geek/node_modules/koa-logger/index.js:96:19
+      2  100.0%            LazyCompile: ~onceWrapper events.js:416:21
+     29    1.0%    LazyCompile: *onconnection net.js:1531:22
+
