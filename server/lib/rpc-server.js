@@ -4,7 +4,7 @@ module.exports = class RPC {
   constructor({ encodeResponse, decodeRequest, isCompleteRequest }) {
     this.encodeResponse = encodeResponse;
     this.decodeRequest = decodeRequest;
-    this.isCompleteRequest = isCompleteRequest;
+    this.isCompleteRequest = isCompleteRequest; // 获取 buffer 长度
   }
 
   createServer(callback) {
@@ -18,12 +18,14 @@ module.exports = class RPC {
             : data;
 
         let checkLength = null;
-        while (buffer && (checkLength = this.isCompleteRequest(buffer))) {
+        while (buffer) {
+          checkLength = this.isCompleteRequest(buffer);
           let requestBuffer = null;
           if (checkLength === buffer.length) {
             requestBuffer = buffer;
             buffer = null;
           } else {
+            // 对于大文件被拆分为多个包怎么处理？
             requestBuffer = buffer.slice(0, checkLength);
             buffer = buffer.slice(checkLength);
           }
