@@ -19,23 +19,20 @@ let lastPlayerAction = '';
 // 玩家出相同动作的次数
 let sameActionCount = 0;
 
-app.use(
-  mount('/favicon.ico', ctx => {
-    ctx.status = 200;
-  }),
-);
 const gameKoa = new koa();
-app.use(mount('/game', gameKoa));
-
 gameKoa.use(async (ctx, next) => {
   if (playerWinCount >= 3) {
     ctx.status = 500;
     ctx.body = '我不玩了！GAME OVER';
     process.exit();
   }
-  await next(); // 中间件
-
+  try {
+    await next(); // 中间件
+  } catch (error) {
+    console.log('koa error :>> ', error);
+  }
   // onion modal 洋葱模型，接收到 playerWon
+  console.log('ctx.playerWon :>> ', ctx.playerWon);
   if (ctx.playerWon) {
     playerWinCount++;
   }
@@ -47,7 +44,7 @@ gameKoa.use(async (ctx, next) => {
   } = ctx;
   const { point, computerAction } = game(action);
   ctx.status = 200;
-  await new Promise(reslove => {
+  await new Promise((resolve, reject) => {
     setTimeout(() => {
       if (point === 0) {
         ctx.body = `平局 >> ${action} vs ${computerAction}`;
@@ -57,13 +54,22 @@ gameKoa.use(async (ctx, next) => {
         ctx.body = `你赢了！>> ${action} vs ${computerAction}`;
         ctx.playerWon = true; // playerWon 会挂在 ctx 上，传递给第一个函数
       }
-      reslove();
+      resolve();
+      // reject(new Error('lala'));
     }, 500);
   });
 });
 
+app.use(mount('/game', gameKoa));
+
 app.use(
-  mount('/', ctx => {
+  mount('/favicon.ico', ctx => {
+    ctx.status = 200;
+  }),
+);
+
+app.use(
+  mount('/', async (ctx, next) => {
     ctx.body = fs.readFileSync(__dirname + '/index.html', 'utf-8');
   }),
 );

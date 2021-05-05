@@ -1,9 +1,9 @@
-const express = require('express');
 const fs = require('fs');
 const process = require('process');
+const express = require('express');
 const game = require('../../commonjs/game');
 const app = express();
-const port = 3001;
+const port = 3002;
 
 const actionMap = {
   rock: 'U+1FAA8',
@@ -18,11 +18,6 @@ let lastPlayerAction = '';
 // 玩家出相同动作的次数
 let sameActionCount = 0;
 
-// express routing
-app.get('/', (req, res) => {
-  res.send(fs.readFileSync(__dirname + '/index.html', 'utf-8'));
-});
-
 app.get('/favicon', (req, res) => {
   res.status(200);
   return;
@@ -36,8 +31,8 @@ app.get(
       res.send('我不玩了！GAME OVER');
       process.exit();
     }
-
     next(); // 中间件
+    // 无法获取到 res.playerWon
     console.log('res.playerWon :>> ', res.playerWon);
     // onion modal 洋葱模型，接收到 playerWon
     if (res.playerWon) {
@@ -62,5 +57,10 @@ app.get(
     }, 500);
   },
 );
+
+// express routing
+app.get('/', (req, res) => {
+  res.send(fs.readFileSync(__dirname + '/index.html', 'utf-8'));
+});
 
 app.listen(port);

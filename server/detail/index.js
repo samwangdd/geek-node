@@ -8,7 +8,7 @@ const server = require('../lib/index')(schemas.ColumnRequest, schemas.ColumnResp
 
 server
   .createServer((request, response) => {
-    const columnid = request.body;
+    // const columnid = request.body;
 
     response.end({
       column: columnData[0],

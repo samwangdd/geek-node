@@ -13,6 +13,7 @@ message Column {
     optional uint32 column_price_market = 12;
     repeated Article articles = 13;
 }
+
 message Article {
     required uint32 id = 1;
     required bool is_video_preview = 2;

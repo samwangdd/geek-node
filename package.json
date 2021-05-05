@@ -19,6 +19,11 @@
   },
   "homepage": "https://github.com/samwangdd/geek-node#readme",
   "dependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
     "easy_sock": "^0.4.1",
     "express": "^4.17.1",
     "glob": "^7.1.6",
@@ -29,7 +34,9 @@
     "koa-mount": "^4.0.0",
     "koa-static": "^5.0.0",
     "open": "^8.0.4",
-    "protocol-buffers": "^4.2.0"
+    "protocol-buffers": "^4.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
