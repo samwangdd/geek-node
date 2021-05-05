@@ -5,7 +5,7 @@ const logger = require('koa-logger');
 
 const app = new koa();
 
-app.use(logger());
+// app.use(logger());
 
 // 兼容 pathname
 app.use(async (ctx, next) => {
@@ -28,6 +28,8 @@ app.use(mount('/detail', require('./detail/index')));
 app.use(mount('/download', require('./download/index')));
 
 app.use(mount('/play', require('./play/index')));
+
+app.use(mount('/list', require('./list/node-bff/index')));
 
 app.listen(3005, () => {
   console.log('client listen: 3005');
