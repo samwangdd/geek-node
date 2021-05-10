@@ -8,7 +8,7 @@ module.exports = async function (sortType, filtType) {
         filtType,
       },
       function (err, res) {
-        err ? reject(err) : resolve(res);
+        err ? reject(err) : resolve(res.columns);
       },
     );
   });

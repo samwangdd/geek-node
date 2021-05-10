@@ -5,6 +5,7 @@ const schemas = protobuf(fs.readFileSync(`${appRoot}/constant/list.proto`));
 
 const columnData = require('../mockdata/column');
 const server = require('../lib/index')(schemas.ListRequest, schemas.ListResponse);
+
 server
   .createServer((req, res) => {
     const { sortType, filtType } = req.body;

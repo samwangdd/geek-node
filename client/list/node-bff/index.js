@@ -6,9 +6,11 @@ const ReactDomServer = require('react-dom/server');
 require('babel-register')({
   presets: ['react'],
 });
+
 const makeTemplate = require(`../../util/makeTemplate`);
 const template = makeTemplate(`${__dirname}/index.htm`);
 const getData = require('./get-data');
+const reactApp = require('./app.jsx');
 
 const app = new koa();
 
@@ -16,7 +18,7 @@ app.use(mount('/static', static(__dirname + '/source')));
 
 app.use(
   mount('/data', async ctx => {
-    ctx.body = await getData(ctx.query.sort, ctx.query.filter);
+    ctx.body = await getData(ctx.query.sort, ctx.query.filt);
   }),
 );
 
@@ -26,9 +28,12 @@ app.use(
     const sortType = ctx.query.sort || 0;
     const filtType = ctx.query.filter || 0;
     const data = await getData(sortType, filtType);
-
-    // ctx.body = template;
-    ctx.body = 'template';
+    ctx.body = template({
+      reactString: ReactDomServer.renderToString(reactApp(data)),
+      reactData: data,
+      filtType,
+      sortType,
+    });
   }),
 );
 
