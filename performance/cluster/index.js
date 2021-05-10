@@ -9,3 +9,5 @@ if (cluster.isMaster) {
 } else {
   require('./app');
 }
+
+// 压测：ab -c50 -n400 http://127.0.0.1:3000/download/
