@@ -18,7 +18,7 @@ app.use(mount('/static', static(__dirname + '/source')));
 
 app.use(
   mount('/data', async ctx => {
-    ctx.body = await getData(ctx.query.sort, ctx.query.filter);
+    ctx.body = await getData(ctx.query.sort, ctx.query.filt);
   }),
 );
 
