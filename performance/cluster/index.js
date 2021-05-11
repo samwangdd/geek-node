@@ -1,8 +1,9 @@
-// 创建、进程守护
+// 创建进程，守护进程
 const cluster = require('cluster');
 const os = require('os');
 
 if (cluster.isMaster) {
+  // 主进程处理逻辑
   for (let i = 0; i < os.cpus().length / 2; i++) {
     createWorker();
   }
@@ -14,16 +15,12 @@ if (cluster.isMaster) {
     }, 5000);
   });
 } else {
-  // 监听进程崩溃错误
+  // 子进程处理逻辑，监听各类错误和异常，回应心跳检测
+  // 监听子进程崩溃错误
   process.on('uncaughtException', err => {
     // 这里可以写日志、上报错误
     console.log('err :>> ', err);
     process.exit(1);
-  });
-
-  // 回应心跳信息
-  process.on('message', res => {
-    process.send(`pong #${process.pid}`);
   });
 
   // 内存泄漏退出程序
@@ -32,10 +29,16 @@ if (cluster.isMaster) {
     process.exit(1);
   }
 
+  // 回应心跳检测
+  process.on('message', res => {
+    process.send(`pong #${process.pid}`);
+  });
   require('./app');
 }
 
-// 创建进程，并检测心跳
+/**
+ * 创建子进程，并检测心跳
+ */
 function createWorker() {
   const worker = cluster.fork();
   let missed = 0;
