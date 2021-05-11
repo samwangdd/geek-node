@@ -11,5 +11,5 @@ http
     }, 500);
   })
   .listen(3000, () => {
-    // console.log('listening :>> ', 3000);
+    console.log('listening :>> ', 3000);
   });
