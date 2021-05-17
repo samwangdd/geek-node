@@ -48,8 +48,10 @@ gameKoa.use(async (ctx, next) => {
     setTimeout(() => {
       if (point === 0) {
         ctx.body = `平局 >> ${action} vs ${computerAction}`;
+        ctx.playerWon = false;
       } else if (point === 1) {
         ctx.body = `你输了！>> ${action} vs ${computerAction}`;
+        ctx.playerWon = false;
       } else {
         ctx.body = `你赢了！>> ${action} vs ${computerAction}`;
         ctx.playerWon = true; // playerWon 会挂在 ctx 上，传递给第一个函数

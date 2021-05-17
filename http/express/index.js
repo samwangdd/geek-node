@@ -26,12 +26,14 @@ app.get('/favicon', (req, res) => {
 app.get(
   '/game',
   (req, res, next) => {
+    console.log('first :>> ');
     if (playerWinCount >= 3) {
       res.status(500);
       res.send('我不玩了！GAME OVER');
       process.exit();
     }
     next(); // 中间件
+    console.log('first end:>> ');
     // 无法获取到 res.playerWon
     console.log('res.playerWon :>> ', res.playerWon);
     // onion modal 洋葱模型，接收到 playerWon
@@ -39,22 +41,29 @@ app.get(
       playerWinCount++;
     }
   },
-  (req, res) => {
+  async (req, res) => {
+    console.log('secened :>> ');
     const {
       query: { action },
     } = req;
     const { point, computerAction } = game(action);
-    setTimeout(() => {
-      res.status(200);
-      if (point === 0) {
-        res.send(`平局 >> ${action} vs ${computerAction}`);
-      } else if (point === 1) {
-        res.send(`你输了！>> ${action} vs ${computerAction}`);
-      } else {
-        res.send(`你赢了！>> ${action} vs ${computerAction}`);
-        res.playerWon = true; // playerWon 会挂在 res 上，传递给第一个函数
-      }
-    }, 500);
+    await new Promise((resolve, reject) => {
+      setTimeout(() => {
+        res.status(200);
+        if (point === 0) {
+          res.send(`平局 >> ${action} vs ${computerAction}`);
+          res.playerWon = false;
+        } else if (point === 1) {
+          res.send(`你输了！>> ${action} vs ${computerAction}`);
+          res.playerWon = false;
+        } else {
+          res.send(`你赢了！>> ${action} vs ${computerAction}`);
+          res.playerWon = true; // playerWon 会挂在 res 上，传递给第一个函数
+        }
+        resolve();
+      }, 500);
+    });
+    console.log('secened end :>> ');
   },
 );
 

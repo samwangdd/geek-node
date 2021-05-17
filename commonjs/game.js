@@ -12,7 +12,7 @@ module.exports = function (playerAction) {
   };
 
   const computerAction = getComputerAction();
-  console.log('computer :>> ', computerAction);
+  // console.log('computer :>> ', computerAction);
 
   let point; // 电脑得分
   if (computerAction === playerAction) {
