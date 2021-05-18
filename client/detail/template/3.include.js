@@ -24,6 +24,7 @@ const context = {
   },
 };
 
+// 遍历 object 生成函数
 Object.keys(templateMap).forEach(key => {
   const temp = templateMap[key];
   templateMap[key] = vm.runInNewContext(
