@@ -17,7 +17,6 @@ const easySock = new EasySock({
 });
 
 easySock.encode = function (data, seq) {
-  console.log('data :>> ', data);
   const body = schemas.ColumnRequest.encode(data);
   const head = Buffer.alloc(HEADER_LENGTH);
 

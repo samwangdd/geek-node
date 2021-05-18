@@ -5,7 +5,7 @@ const koa = require('koa');
 const app = new koa();
 const rpcClient = require('./client');
 const template = require('./template');
-const detailTemplate = template(__dirname + '/template/index.html');
+const detailTemplate = template(__dirname + '/template/index.html'); // 已经被编译为 IIFE 函数
 
 app.use(mount('/static', static(`${__dirname}/source/static/`)));
 
