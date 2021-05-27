@@ -1,8 +1,13 @@
+const fs = require('fs');
+
+const data = async () => await fs.readFile(__dirname + '/../business/play/data.js', 'utf-8');
+const template = async () => await fs.readFile(__dirname + '/../business/play/template.htm', 'utf-8');
 module.exports = {
-  '/detail': async function () {
-    return 'detail page';
+  '/play': {
+    data,
+    template,
   },
-  '/play': async function () {
-    return 'play page';
-  },
+  // '/detail': async function () {
+  //   return 'detail page';
+  // },
 };

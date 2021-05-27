@@ -1,5 +1,5 @@
 const protobuf = require('protocol-buffers');
-const EasySock = require('easy-socks');
+const EasySock = require('easy_sock');
 
 let schemas = null;
 let easySock = null;

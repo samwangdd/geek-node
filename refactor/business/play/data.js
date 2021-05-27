@@ -1,3 +1,5 @@
+// 业务逻辑
+// 定义数据请求接口
 module.exports = {
   detail: {
     prot: 4000,

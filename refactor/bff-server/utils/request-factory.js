@@ -1,4 +1,4 @@
-const requestors = {};
+let requestors = {};
 
 /**
  * 请求工厂函数
@@ -21,7 +21,7 @@ function factory(config) {
   requestors[config.protocol].compile(config);
 
   // 返回一个函数
-  return function (data) {
+  return async function (data) {
     try {
       data = config.before(data);
     } catch (error) {
