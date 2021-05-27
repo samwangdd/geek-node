@@ -1,12 +1,13 @@
 const protobuf = require('protocol-buffers');
 const EasySock = require('easy_sock');
+const fs = require('fs');
 
 let schemas = null;
 let easySock = null;
 
 module.exports = {
   compile: function (config) {
-    schemas = protobuf(config.protobufPath);
+    schemas = protobuf(fs.readFileSync(config.protobufPath));
 
     easySock = new EasySock({
       ip: config.ip,

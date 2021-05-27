@@ -1,9 +1,10 @@
 const koa = require('koa');
 const mount = require('koa-mount');
-const createTemplate = require('./utils/createTemplate');
 
 const router = require('./router');
+const createTemplate = require('./utils/createTemplate');
 const requestFactory = require('./utils/request-factory');
+
 const app = new koa();
 
 // TODO: 自动注册通信（请求）协议

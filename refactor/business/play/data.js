@@ -1,11 +1,12 @@
 // 业务逻辑
 // 定义数据请求接口
+const root = process.cwd();
 module.exports = {
   detail: {
     prot: 4000,
     ip: '127.0.0.1',
     protocol: 'geek-rpc',
-    protobufPath: `${__dirname}/../../../constant/detail.proto`,
+    protobufPath: `${root}/constant/detail.proto`,
     requestStruct: 'ColumnRequest',
     responseStruct: 'ColumnResponse',
   },
