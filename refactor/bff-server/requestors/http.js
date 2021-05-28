@@ -1,14 +1,13 @@
 const axios = require('axios');
+// const request = require('request');
 
+let url = '';
 module.exports = {
   compile: function (config) {
-    return config.url;
+    url = config.url;
   },
-  request: function (config) {
-    return new Promise((resolve, reject) => {
-      axios(url)
-        .then(res => resolve(res))
-        .catch(error => reject(error));
-    });
+  request: async function (config) {
+    const res = await axios(url);
+    return res.data;
   },
 };

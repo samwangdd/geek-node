@@ -2,19 +2,26 @@
 // 定义数据请求接口
 const root = process.cwd();
 module.exports = {
-  detail: {
-    prot: 4000,
+  column: {
     ip: '127.0.0.1',
+    port: 4000,
     protocol: 'geek-rpc',
     protobufPath: `${root}/constant/detail.proto`,
     requestStruct: 'ColumnRequest',
     responseStruct: 'ColumnResponse',
+    then(res) {
+      return res.column;
+    },
   },
-  article: {
+  articleList: {
     protocol: 'http',
     url: 'http://127.0.0.1:4003',
-    before: () => {},
-    then: () => {},
+    before: function (data) {
+      return data;
+    },
+    then: function (res) {
+      return res.data.list;
+    },
     catch: () => {},
   },
 };
