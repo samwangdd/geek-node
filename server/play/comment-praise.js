@@ -5,7 +5,7 @@ const protobuf = require('protocol-buffers');
 const appRoot = process.cwd();
 const schema = protobuf(fs.readFileSync(`${appRoot}/constant/comment.proto`));
 
-const commentData = require('../mockdata/comment');
+const commentData = require('../../mock/comment');
 const server = require('../lib/index')(schema.PraiseRequest, schema.PraiseResponse);
 server
   .createServer((request, response) => {

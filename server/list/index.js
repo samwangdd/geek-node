@@ -3,7 +3,7 @@ const protobuf = require('protocol-buffers');
 const appRoot = process.cwd();
 const schemas = protobuf(fs.readFileSync(`${appRoot}/constant/list.proto`));
 
-const columnData = require('../mockdata/column');
+const columnData = require('../../mock/column');
 const server = require('../lib/index')(schemas.ListRequest, schemas.ListResponse);
 
 server
