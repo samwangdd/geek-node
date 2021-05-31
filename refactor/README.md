@@ -7,5 +7,12 @@
     ├── requestors  // 请求协议
     ├── utils       // 工具方法
     ├── router.js   // 路由配置
-    └── run.js      // 入口
+    └── entry.js      // 入口
+```
+
+```js
+// 运行 bff
+nodemon refactor/bff-server/entry
+// 运行后端服务
+nodemon refactor/bff-server/entry
 ```

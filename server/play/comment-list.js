@@ -5,7 +5,7 @@ const protobuf = require('protocol-buffers');
 const appRoot = process.cwd();
 
 const commentSchemas = protobuf(fs.readFileSync(`${appRoot}/constant/comment.proto`));
-const commentData = require('../mockdata/comment');
+const commentData = require('../../mock/comment');
 
 /**
  * 服务端的编解包逻辑
