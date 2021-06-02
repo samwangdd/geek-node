@@ -3,7 +3,7 @@ const protobuf = require('protocol-buffers');
 
 const appRoot = process.cwd();
 const schema = protobuf(fs.readFileSync(`${appRoot}/constant/list.proto`));
-const createSocket = require('../../util/createSocket');
+const createSocket = require(`${appRoot}/utils/server/createSocket`);
 
 module.exports = createSocket({
   port: 3006,

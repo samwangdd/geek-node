@@ -10,11 +10,16 @@
 
 ```shell
 yarn
-yarn server # 启动服务端
-yarn client # 启动客户端
+yarn:dev server # 启动服务端
+yarn:dev client # 启动客户端
 ```
 
-访问 localhost:3005
+访问
+
+- [下载页](http://localhost:3005/download/)
+- [播放页](http://localhost:3005/play/)
+- [详情页](http://localhost:3005/detail/?columnid=123)
+- [列表页](http://localhost:3005/list/)
 
 ## 项目结构
 
