@@ -29982,11 +29982,11 @@ if (false) {} else {
 /*!*******************!*\
   !*** ./index.jsx ***!
   \*******************/
-const Container = __webpack_require__(/*! ../components/container.jsx */ "../components/container.jsx");
-
 const React = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
 
 const ReactDOM = __webpack_require__(/*! react-dom */ "../../../node_modules/react-dom/index.js");
+
+const Container = __webpack_require__(/*! ../components/container.jsx */ "../components/container.jsx");
 
 class App extends React.Component {
   constructor() {

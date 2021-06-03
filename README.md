@@ -16,10 +16,10 @@ yarn:dev client # 启动客户端
 
 访问
 
-- [下载页](http://localhost:3005/download/)
-- [播放页](http://localhost:3005/play/)
-- [详情页](http://localhost:3005/detail/?columnid=123)
-- [列表页](http://localhost:3005/list/)
+- [1.下载页](http://localhost:3005/download/)
+- [2.详情页](http://localhost:3005/detail/?columnid=123)
+- [3.播放页](http://localhost:3005/play/)
+- [4.列表页](http://localhost:3005/list/)
 
 ## 项目结构
 
@@ -37,7 +37,7 @@ yarn:dev client # 启动客户端
 │   ├── entry.js
 │   ├── detail
 │   ├── download
-│   ├── list
+│   ├── list      // SSR 代码同构
 │   ├── play
 │   └── util
 ├── server        // 后端服务

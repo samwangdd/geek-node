@@ -5,7 +5,7 @@ const logger = require('koa-logger');
 
 const app = new koa();
 
-// app.use(logger());
+app.use(logger());
 
 // 兼容 pathname
 app.use(async (ctx, next) => {

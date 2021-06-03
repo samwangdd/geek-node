@@ -1,6 +1,6 @@
-const Container = require('../components/container.jsx');
 const React = require('react');
 const ReactDOM = require('react-dom');
+const Container = require('../components/container.jsx');
 
 class App extends React.Component {
   constructor() {

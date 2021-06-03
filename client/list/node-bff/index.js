@@ -10,7 +10,7 @@ const root = process.cwd();
 const makeTemplate = require(`${root}/utils/server/makeTemplate`);
 const template = makeTemplate(`${__dirname}/index.htm`);
 const getData = require('./get-data');
-const reactApp = require('./app.jsx');
+const reactApp = require('./app.jsx'); // react 组件
 const app = new koa();
 
 app.use(mount('/static', static(__dirname + '/source')));
